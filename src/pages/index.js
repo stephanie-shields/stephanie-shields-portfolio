@@ -1,5 +1,5 @@
 import * as React from "react";
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 import "./../styles/global.scss";
 
 // markup
@@ -31,7 +31,7 @@ const IndexPage = () => {
       </header>
       <main>
         <section className="container hero">
-          <div className="grid bg-light py-5">
+          <div className="grid bg-primary py-5">
             <div className="g-col-10 g-start-2 text-center">
               <h1 className="h2 text-uppercase">Hello, I'm Stephanie</h1>
               <p className="display-5">I design and build impactful digital experiences and work hard to ensure lasting product success</p>
@@ -43,31 +43,40 @@ const IndexPage = () => {
           <div className="grid mb-5">
             <div className="g-col-10 g-start-2">
               <div className="grid">
-                <div className="g-col-4 bg-light p-3">
-                  
+                <div className="g-col-4 card">
+
                 </div>
-                <div className="g-col-8 bg-light p-3">
-                  <h3 className="h5">USAspending.gov</h3>
-                  {/* <Link className="btn btn-secondary" to="/work/usaspending-gov-project">Explore</Link> */}
+                <div className="g-col-8 card">
+                  <div class="card-body">
+                    <h3 className="h5">USAspending.gov</h3>
+                    <Link className="btn btn-secondary" to="/work/usaspending-gov-project">Explore</Link>
+                  </div>
                 </div>
-                <div className="g-col-7 bg-light p-3">
-                  <h3 className="h5">Recreation.gov</h3>
-                  {/* <Link className="btn btn-secondary" to="/work/recreation-gov-project">Explore</Link> */}
+                <div className="g-col-7 card">
+                  <div class="card-body">
+                    <h3 className="h5">Recreation.gov</h3>
+                    <Link className="btn btn-secondary" to="/work/recreation-gov-project">Explore</Link>
+                  </div>
                 </div>
-                <div className="g-col-5 bg-light p-3">
-                  <h3 className="h5">FDMS.gov</h3>
-                  {/* <Link className="btn btn-secondary" to="/work/fdms-gov-project">Explore</Link> */}
+                <div className="g-col-5 card">
+                  <div class="card-body">
+                    <h3 className="h5">FDMS.gov</h3>
+                    <Link className="btn btn-secondary" to="/work/fdms-gov-project">Explore</Link>
+                  </div>
                 </div>
-                <div className="g-col-4 bg-light p-3">
-                  <h3 className="h5">Regulations.gov</h3>
-                  {/* <Link className="btn btn-secondary" to="/work/regulations-gov-project">Explore</Link> */}
+                <div className="g-col-4 card">
+                  <div class="card-body">
+                    <h3 className="h5">Regulations.gov</h3>
+                    <Link className="btn btn-secondary" to="/work/regulations-gov-project">Explore</Link>
+                  </div>
                 </div>
-                <div className="g-col-4 bg-light p-3">
-                  <h3 className="h5">myEverify.gov</h3>
-                  {/* <Link className="btn btn-secondary" to="/work/myeverify-gov-project">Explore</Link> */}
+                <div className="g-col-4 card">
+                  <div class="card-body"><h3 className="h5">myEverify.gov</h3>
+                    <Link className="btn btn-secondary" to="/work/myeverify-gov-project">Explore</Link>
+                  </div>
                 </div>
-                <div className="g-col-4 bg-light p-3">
-                  
+                <div className="g-col-4 card">
+
                 </div>
               </div>
             </div>
@@ -76,7 +85,7 @@ const IndexPage = () => {
         <section className="container">
           <div className="grid mb-5">
             <div className="g-col-10 g-start-2">
-                <div className="grid">
+              <div className="grid">
                 <div className="g-col-7">
                   <h2 className="">Checkout My GitHub</h2>
                   <p className="mb-4">Explore my personal projects on GitHub for a look into my process, code examples, and inspiration.</p>
