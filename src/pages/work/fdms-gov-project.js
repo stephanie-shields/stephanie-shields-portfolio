@@ -7,7 +7,8 @@ const fdmsGovProject = () => {
     <ProjectLayout
       pageTitle="FDMS.gov"
       previousProject="/work/recreation-gov-project"
-      nextProject="/work/regulations-gov-project">
+      nextProject="/work/regulations-gov-project"
+      tags={[`UX Design`, `UI Design`, `Front End Development`]}>
       {/* Content goes here */}
     </ProjectLayout>   
   )

@@ -7,7 +7,8 @@ const myEverifyGovProject = () => {
     <ProjectLayout
       pageTitle="myEverify.gov"
       previousProject="/work/regulations-gov-project"
-      nextProject="/work/usaspending-gov-project">
+      nextProject="/work/usaspending-gov-project"
+      tags={[`UI Design`, `Front End Development`]}>
       {/* Content goes here */}
     </ProjectLayout>
   )
