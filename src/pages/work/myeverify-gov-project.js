@@ -1,14 +1,15 @@
 import * as React from "react";
+import { projects } from '../../data/projects';
 import ProjectLayout from '../../components/ProjectLayout';
 
 // markup
 const myEverifyGovProject = () => {
   return (
     <ProjectLayout
-      pageTitle="myEverify.gov"
-      previousProject="/work/regulations-gov-project"
-      nextProject="/work/usaspending-gov-project"
-      tags={[`UI Design`, `Front End Development`]}>
+      pageTitle={projects[4].projectTitle}
+      nextProject={projects[0].projectLink}
+      previousProject={projects[3].projectLink}
+      badges={projects[4].projectBadges}>
       {/* Content goes here */}
     </ProjectLayout>
   )
