@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import BadgeGroup from './BadgeGroup';
 
-const ProjectLayout = ({ pageTitle, nextProject, previousProject, children, tags }) => {
+const ProjectLayout = ({ pageTitle, nextProject, previousProject, children, badges }) => {
   return (
     <main>
       <div className="container mt-5">
@@ -14,20 +15,7 @@ const ProjectLayout = ({ pageTitle, nextProject, previousProject, children, tags
               </ol>
             </nav>
             <h1>{pageTitle}</h1>
-            {tags && tags.length > 1 &&
-              <ul className="list-inline">
-                {tags.map((tag) =>
-                  <li className="list-inline-item"><span className="badge text-bg-light">{tag}</span></li>
-                )}
-              </ul>
-            }
-            {tags && tags.length === 1 &&
-              <>
-                {tags.map((tag) =>
-                  <span className="badge text-bg-light">{tag}</span>
-                )}
-              </>
-            }
+            <BadgeGroup badges={badges} />
             {children}
           </div>
         </div>
