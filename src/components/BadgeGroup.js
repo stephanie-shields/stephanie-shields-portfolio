@@ -7,7 +7,7 @@ const BadgeGroup = ({ badges }) => {
       {badges && badges.length > 1 &&
         <ul className="list-inline">
           {badges.map((badge) =>
-            <li className="list-inline-item">
+            <li className="list-inline-item" key={badge}>
               <Badge badgeText={badge} />
             </li>
           )}
