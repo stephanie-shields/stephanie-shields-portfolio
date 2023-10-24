@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 const Badge = ({ badgeText, badgeBackround }) => {
-  const hasBadgeBackround = badgeBackround ? badgeBackround : `text-bg-primary`;
+  const hasBadgeBackround = badgeBackround ? badgeBackround : `text-bg-light`;
   return (
-    <span className={`badge rounded-pill ${hasBadgeBackround}`}>{badgeText}</span>
+    <span className={`badge border ${hasBadgeBackround}`}>{badgeText}</span>
   )
 }
 
