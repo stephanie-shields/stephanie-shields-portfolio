@@ -5,11 +5,9 @@ import { Link } from 'gatsby';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, A11y } from 'swiper';
+import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 
-// markup
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
