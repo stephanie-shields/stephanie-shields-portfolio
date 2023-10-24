@@ -4,23 +4,27 @@ import BadgeGroup from './BadgeGroup';
 
 const ProjectCard = ({ projectImage, projectImageAlt, projectTitle, projectText, projectLink, projectBadges }) => {
   return (
-    <div className="card mb-3 mx-3">
+    <Link className="card border-0 mb-3 mx-3 position-relative" to={projectLink}>
       {projectImage && 
         <img src={projectImage} className="card-img-top" alt={projectImageAlt} />
       }
-      <div className="card-body">
-        <h3 className="h5 card-title">{projectTitle}</h3>
+      {!projectImage && 
+        <div className="card-img-top bg-light p-3 rounded-4 text-center">
+          <p className="my-5">Image coming soon</p>
+        </div>
+      }
+      <div className="position-absolute">
+        <BadgeGroup badges={projectBadges} />
+      </div>
+      <div className="card-body px-0 pt-3">
+        <h3 className="card-title visually-hidden">{projectTitle}</h3>
         {projectText && 
           <>
             <p className="card-text">{projectText}</p>
           </>
         }
-        <BadgeGroup badges={projectBadges} />
-        </div>
-        <div className="card-footer d-grid">
-          <Link className="btn btn-outline-primary" to={projectLink}>Explore</Link>
       </div>
-    </div>
+    </Link>
   )
 }
 

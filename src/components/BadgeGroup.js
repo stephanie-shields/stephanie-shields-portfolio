@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Badge from './Badge';
 
-const BadgeGroup = ({ badges }) => {
+const BadgeGroup = ({ badges, badgeBackround }) => {
   return (
     <>
       {badges && badges.length > 1 &&
-        <ul className="list-inline">
+        <ul className="list-inline mb-0">
           {badges.map((badge) =>
             <li className="list-inline-item" key={badge}>
-              <Badge badgeText={badge} />
+              <Badge badgeText={badge} badgeBackround={badgeBackround} />
             </li>
           )}
         </ul>
