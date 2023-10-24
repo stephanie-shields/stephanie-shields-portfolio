@@ -19,10 +19,14 @@ class IndexPage extends React.Component {
         <Header />
         <main>
           <section className="container hero">
-            <div className="grid bg-primary py-5 rounded-4">
-              <div className="g-col-10 g-start-2 text-center">
-                <h1 className="h2 text-uppercase">Hello, I'm Stephanie</h1>
-                <p className="display-5 mb-0">I design and build impactful digital experiences and work hard to ensure lasting product success</p>
+            <div className="grid py-5">
+              <div className="g-col-7">
+                <h1 className="display-5 mb-4">
+                  <span class="fs-4 d-block mb-2">&#128075; Hello, I'm Stephanie</span>
+                  <span>I design and build impactful digital solutions</span>
+                </h1>
+                <p className="lead mb-0">Proven ability to lead multidisciplinary teams, manage key stakeholder relationships, and deliver products that enhance user satisfaction and business objectives.</p>
+                <a class="btn btn-link px-0" href="https://www.linkedin.com/in/steph-shields/" target="_blank">Get in Touch</a>
               </div>
             </div>
           </section>
