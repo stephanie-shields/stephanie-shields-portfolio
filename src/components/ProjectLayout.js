@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import Header from '../components/Header';
 import BadgeGroup from './BadgeGroup';
 
@@ -11,6 +11,7 @@ const ProjectLayout = ({ pageTitle, nextProject, previousProject, children, badg
         <div className="container mt-5">
           <div className="grid mb-5">
             <div className="g-col-10 g-start-2">
+              <button className="btn btn-light btn-sm mb-4" onClick={() => navigate(-1)}>Back</button>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item"><Link to="/">Home</Link></li>
