@@ -4,7 +4,7 @@ import BadgeGroup from './BadgeGroup';
 
 const ProjectCard = ({ projectImage, projectImageAlt, projectTitle, projectText, projectLink, projectBadges }) => {
   return (
-    <Link className="card border-0 mb-3 mx-3 position-relative" to={projectLink}>
+    <Link className="card border-0 mb-3 position-relative" to={projectLink}>
       {projectImage && 
         <img src={projectImage} className="card-img-top" alt={projectImageAlt} />
       }

@@ -8,7 +8,8 @@ import ProjectCard from '../components/ProjectCard';
 import GithubProjectCard from '../components/GithubProjectCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
-import 'swiper/css';
+import 'swiper/scss';
+import 'swiper/scss/a11y';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class IndexPage extends React.Component {
               <Swiper
                 modules={[Navigation, A11y]}
                 autoHeight={true}
-                spaceBetween={0}
+                spaceBetween={32}
                 slidesPerView={3}
                 navigation={{
                   prevEl: '.swiper-nav-prev',
@@ -116,7 +117,7 @@ class IndexPage extends React.Component {
             <div className="grid">
               <div className="g-col-4">
                 <h2 className="">&#128640; GitHub</h2>
-                <p className="mb-4">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
+                <p className="mb-4 w-75">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
                 <div className="d-flex mb-3">
                   <button className="btn btn-outline-primary me-2 github-nav-prev">
                     Previous
@@ -132,29 +133,27 @@ class IndexPage extends React.Component {
                   modules={[Navigation, A11y]}
                   autoHeight={true}
                   spaceBetween={0}
-                  slidesPerView={2}
+                  slidesPerView={'auto'}
                   navigation={{
                     prevEl: '.github-nav-prev',
                     nextEl: '.github-nav-next'
                   }}
-                  onSlideChange={() => console.log('slide change')}
-                  onSwiper={(swiper) => console.log(swiper)}
                 >
-                  <SwiperSlide>
+                  <SwiperSlide className="w-auto h-100">
                     <GithubProjectCard
                       projectTitle={github[0].projectTitle}
                       projectLink={github[0].projectLink}
                       projectBadges={github[0].projectBadges}
                       projectText={github[0].projectText} />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="w-auto h-100">
                     <GithubProjectCard
                       projectTitle={github[1].projectTitle}
                       projectLink={github[1].projectLink}
                       projectBadges={github[1].projectBadges}
                       projectText={github[1].projectText} />
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide className="w-auto h-100">
                     <GithubProjectCard
                       projectTitle={github[2].projectTitle}
                       projectLink={github[2].projectLink}
