@@ -18,7 +18,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <Header />
+        <Header />       
         <main>
           <section className="container hero">
             <div className="grid py-5">
@@ -28,7 +28,10 @@ class IndexPage extends React.Component {
                   <span>I design and build impactful digital solutions</span>
                 </h1>
                 <p className="lead mb-0">Proven ability to lead multidisciplinary teams, manage key stakeholder relationships, and deliver products that enhance user satisfaction and business objectives.</p>
-                <a className="btn btn-link px-0" href="https://www.linkedin.com/in/steph-shields/" target="_blank">Get in Touch</a>
+                <div className="d-flex mt-4">
+                  <Link to="/work" className="btn btn-primary me-3">See My Work</Link>
+                  <a className="btn btn-link px-0" href="https://www.linkedin.com/in/steph-shields/" target="_blank">Get in Touch</a>
+                </div>
               </div>
             </div>
           </section>
