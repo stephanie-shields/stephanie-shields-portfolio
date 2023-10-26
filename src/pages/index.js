@@ -1,8 +1,7 @@
 import * as React from "react";
-import "./../styles/global.scss";
+import { Link } from 'gatsby';
 import { projects } from '../data/projects';
 import { github } from '../data/github';
-import { Link } from 'gatsby';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
 import GithubProjectCard from '../components/GithubProjectCard';
@@ -10,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/a11y';
+import * as indexStyles from "./index.module.css"
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class IndexPage extends React.Component {
             <div className="grid py-5">
               <div className="g-col-7">
                 <h1 className="display-5 mb-4">
-                  <span className="fs-4 d-block mb-2">&#128075; Hello, I'm Stephanie</span>
+                  <span className={`fs-4 d-block mb-3 text-body fw-normal ${indexStyles.textGreeting}`}>&#128075; Hello, I'm Stephanie</span>
                   <span>I design and build impactful digital solutions</span>
                 </h1>
                 <p className="lead mb-0">Proven ability to lead multidisciplinary teams, manage key stakeholder relationships, and deliver products that enhance user satisfaction and business objectives.</p>
@@ -102,6 +102,7 @@ class IndexPage extends React.Component {
                   <div className="px-2 py-3">
                     <h2>&#128293; Capabilities</h2>
                     <p>Collaborating across disciplines to ensure a cohesive product experience that truly addresses user needs.</p>
+                    <Link to="/capabilities" className="btn btn-primary">Learn More</Link>
                   </div>
                 </div>
               </div>
@@ -109,6 +110,7 @@ class IndexPage extends React.Component {
                 <div className="border bg-white rounded-5 py-5 px-4">
                   <h2>&#128170; Design Process</h2>
                   <p>The foundation of a successful product is built on a diverse blend of methods and technologies.</p>
+                  <Link to="/process" className="btn btn-primary">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -117,7 +119,7 @@ class IndexPage extends React.Component {
             <div className="grid">
               <div className="g-col-4">
                 <h2 className="">&#128640; GitHub</h2>
-                <p className="mb-4 w-75">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
+                <p className="mb-4">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
                 <div className="d-flex mb-3">
                   <button className="btn btn-outline-primary me-2 github-nav-prev">
                     Previous
@@ -169,6 +171,7 @@ class IndexPage extends React.Component {
               <div className="g-col-4">
                 <h2 className="">&#9996; Tech Stack</h2>
                 <p>Explore my favorite technology picks and frameworks.</p>
+                <Link to="/tech-stack" className="btn btn-primary">Learn More</Link>
               </div>
             </div>
           </section>
