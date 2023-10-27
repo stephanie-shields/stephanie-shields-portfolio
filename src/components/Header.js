@@ -3,7 +3,18 @@ import { Link } from 'gatsby';
 
 const Header = () => {
   return (
-    <header className="py-3 border-bottom">
+    <>
+      <div class="alert alert-warning rounded-0 py-2 mb-0" role="alert">
+        <div className="container">
+          <div className="d-flex align-items-center">
+            <i className="fa-solid fa-triangle-exclamation me-2 text-warning"></i>
+            <p className="mb-0 text-body">
+              <small>Actively working on building my portfolio, feel free to check out the progress live here: <a href="https://github.com/stephanie-shields/stephanie-shields-portfolio" target="_blank" className="link-dark">github.com/stephanie-shields/stephanie-shields-portfolio</a></small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <header className="py-3 border-bottom">
         <div className="container">
           <div className="grid py-2">
             <div className="g-col-9">
@@ -31,17 +42,24 @@ const Header = () => {
             </div>
             <div className="g-col-3">
               <ul className="list-inline d-flex justify-content-end mb-0">
-                <li className="list-inline-item">
-                  <a href="https://www.linkedin.com/in/steph-shields/" target="_blank">LinkedIn</a>
+                <li className="list-inline-item me-3">
+                  <a href="https://www.linkedin.com/in/steph-shields/" target="_blank" className="d-inline-block">
+                    <i className="fa-brands fa-linkedin fa-2xl"></i>
+                    <span className="visually-hidden">LinkedIn</span>
+                  </a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="https://github.com/stephanie-shields" target="_blank">GitHub</a>
+                  <a href="https://github.com/stephanie-shields" target="_blank" className="d-inline-block">
+                    <i className="fa-brands fa-github fa-2xl"></i>
+                    <span className="visually-hidden">GitHub</span>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </header>
+    </>
   )
 }
 
