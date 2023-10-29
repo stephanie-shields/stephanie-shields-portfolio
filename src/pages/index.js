@@ -9,7 +9,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/a11y';
-import * as indexStyles from "./index.module.css"
+import * as indexStyles from "./index.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -33,7 +35,7 @@ class IndexPage extends React.Component {
                   <Link to="/work" className="btn btn-primary me-3">See My Work</Link>
                   <a className="btn btn-link px-0" href="https://www.linkedin.com/in/steph-shields/" target="_blank">
                     <span>Get in Touch</span>
-                    <i className="fa-solid fa-arrow-right ms-2"></i>
+                    <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                   </a>
                 </div>
               </div>
@@ -133,7 +135,7 @@ class IndexPage extends React.Component {
                 </div>
                 <a className="btn btn-link px-0" href="https://github.com/stephanie-shields" target="_blank" role="button">
                   <span>Visit My GitHub</span>
-                  <i className="fa-solid fa-arrow-right ms-2"></i>
+                  <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                 </a>
               </div>
               <div className="g-col-8">

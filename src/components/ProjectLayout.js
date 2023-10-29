@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import Header from '../components/Header';
 import BadgeGroup from './BadgeGroup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectLayout = ({ pageTitle, nextProject, previousProject, children, badges }) => {
   return (
@@ -12,7 +14,7 @@ const ProjectLayout = ({ pageTitle, nextProject, previousProject, children, badg
           <div className="grid mb-5">
             <div className="g-col-10 g-start-2">
               <button className="btn btn-light btn-sm mb-4" onClick={() => navigate(-1)}>
-                <i className="fa-solid fa-arrow-left me-2"></i>
+                <FontAwesomeIcon icon={faArrowLeft} className="me-2" />
                 <span>Back</span>
               </button>
               <nav aria-label="breadcrumb">
