@@ -177,7 +177,7 @@ class IndexPage extends React.Component {
           <section className="container my-5">
             <div className="grid">
               <div className="g-col-4">
-                <h2 className="">&#9996; Tech Stack</h2>
+                <h2 className="">&#9996;&#65039; Tech Stack</h2>
                 <p>Explore my favorite technology picks and frameworks.</p>
                 <Link to="/tech-stack" className="btn btn-primary">Learn More</Link>
               </div>
