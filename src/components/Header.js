@@ -39,18 +39,18 @@ const Header = () => {
                   <div className={`${headerStyles.logotype} fs-5`}>Stephanie Shields</div>
                   {/* <div className="tagline text-lowercase">Senior UX Engineer</div> */}
                 </Link>
-                <ul className="list-inline d-flex mb-0">
+                <ul className={`${headerStyles.navigation} list-inline d-flex mb-0`}>
                   <li className="list-inline-item mx-3">
-                    <Link to="/about">About</Link>
+                    <Link to="/about" className="link-body-emphasis text-decoration-none">About</Link>
                   </li>
                   <li className="list-inline-item mx-3">
-                    <Link to="/work">Work</Link>
+                    <Link to="/work" className="link-body-emphasis text-decoration-none">Work</Link>
                   </li>
                   <li className="list-inline-item mx-3">
-                    <Link to="/capabilities">Capabilities</Link>
+                    <Link to="/capabilities" className="link-body-emphasis text-decoration-none">Capabilities</Link>
                   </li>
                   <li className="list-inline-item mx-3">
-                    <Link to="/process">Process</Link>
+                    <Link to="/process" className="link-body-emphasis text-decoration-none">Process</Link>
                   </li>
                 </ul>
               </div>
