@@ -28,9 +28,22 @@ module.exports = {
             name: `PT Serif`,
             file: `https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap`,
           },
+          {
+            name: `Inter`,
+            file: `https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap`,
+          },
         ],
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Stephanie Shields | Senior Lead UX Engineer`,
+        short_name: `Stephanie Shields`,
+        description: `The new and improved Stephanie Shields portfolio website.`,
+        icon: `./src/images/favicon.png`
+      },
+    },
   ],
   pathPrefix: "/stephanie-shields-portfolio"
 };
