@@ -37,7 +37,7 @@ class IndexPage extends React.Component {
           </div>
           <section className="container hero">
             <div className="grid py-5">
-              <div className="g-col-7">
+              <div className="g-col-6">
                 <h1 className="display-5 mb-4">
                   <span className={`fs-4 d-block mb-3 text-body fw-normal ${indexStyles.textGreeting}`}>&#128075; Hello, I'm Stephanie</span>
                   <span>I design and build impactful digital solutions</span>
