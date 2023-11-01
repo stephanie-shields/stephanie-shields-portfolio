@@ -22,13 +22,18 @@ class IndexPage extends React.Component {
     return (
       <>
         <Header />   
-        <main className="relative">
-          <div className={`${indexStyles.stripes} z-n1`}>
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
+        <main className="position-relative overflow-hidden">
+          <div className={`${indexStyles.stripesContainer} z-n1`}>
+            <div className={`${indexStyles.stripes}`}>
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
           <section className="container hero">
             <div className="grid py-5">
