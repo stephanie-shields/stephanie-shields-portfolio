@@ -1,5 +1,15 @@
-.text-greeting {
+.hero-greeting {
   font-family: var(--bs-body-font-family);
+}
+
+.hero-highlight {
+  color: var(--bs-heading-color);
+  padding: 0;
+  background: linear-gradient(to top, #FBDCFF 40%, transparent 40%);
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  background-position: 0 80%;
+  position: relative;
 }
 
 .stripes-container {
