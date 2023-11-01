@@ -18,7 +18,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <header className="py-3 border-bottom">
+      <header className="py-3 border-bottom bg-white">
         <div className="container">
           <div className="grid py-1">
             <div className="g-col-9">

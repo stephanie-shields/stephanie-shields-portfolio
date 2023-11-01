@@ -22,7 +22,14 @@ class IndexPage extends React.Component {
     return (
       <>
         <Header />   
-        <main>
+        <main className="relative">
+          <div className={`${indexStyles.stripes} z-n1`}>
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
           <section className="container hero">
             <div className="grid py-5">
               <div className="g-col-7">
