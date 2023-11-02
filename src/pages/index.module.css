@@ -19,8 +19,17 @@
   clip-path: circle(700px);
   background: linear-gradient(90deg, rgba(190,50,208,1) 0%, rgba(243,81,49,1) 100%);
   position: absolute;
-  top: -55%;
-  right: -45%;
+  top: -50%;
+  left: calc(50% - 700px);
+  right: auto;
+}
+
+@media (min-width: 1200px) {
+  .stripes-container {
+    top: -55%;
+    left: auto;
+    right: -45%;
+  }
 }
 
 .stripes, .stripes span {
@@ -109,4 +118,37 @@
   position: absolute;
   left: -64px;
   bottom: 56px;
+}
+
+.polygon-shape-top {
+  position: absolute;
+  top: -56px;
+  left: -120px;
+  display: inline-block;
+  -webkit-animation: scale 3s ease alternate-reverse infinite;
+  animation: scale 3s ease alternate-reverse infinite;
+}
+
+.polygon-shape-bottom {
+  position: absolute;
+  right: -112px;
+  bottom: 80px;
+  rotate: -90deg;
+  display: inline-block;
+  -webkit-animation: scale 3s ease alternate infinite;
+  animation: scale 3s ease alternate infinite;
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    -webkit-transform: rotate(20deg) scale(1.15);
+    -ms-transform: rotate(20deg) scale(1.15);
+    transform: rotate(20deg) scale(1.15);
+  }
 }
