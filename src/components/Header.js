@@ -1,17 +1,23 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronRight, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import * as headerStyles from "./header.module.css";
+import * as headerStyles from './header.module.css';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
-const Header = () => {
+function Header() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="alert alert-warning rounded-0 py-2 mb-0" role="alert">
         <div className="container">
-          <div className="d-flex align-items-center">
-            <FontAwesomeIcon icon={faTriangleExclamation} className="me-2 text-warning" />
+          <div className="d-flex">
+            <FontAwesomeIcon icon={faTriangleExclamation} className="mt-1 me-2 text-warning" />
             <p className="mb-0 text-body">
               <small>Actively working on building my portfolio, feel free to check out the progress live here: <a href="https://github.com/stephanie-shields/stephanie-shields-portfolio" target="_blank" className="link-dark">github.com/stephanie-shields/stephanie-shields-portfolio</a></small>
             </p>
@@ -20,7 +26,7 @@ const Header = () => {
       </div>
       <header className="py-3 border-bottom bg-white">
         <div className="container">
-          <div className="grid py-1">
+          <div className="grid py-1 align-items-center">
             <div className="g-col-9">
               <div className="d-flex h-100 align-items-center">
                 <Link className={`${headerStyles.logo} me-5`} to="/">
@@ -36,10 +42,10 @@ const Header = () => {
                       <path fill="url(#gradient)" d="M36.33 8.46a17.589 17.589 0 0 0-4.32-4.45A19.854 19.854 0 0 0 20 0C8.97 0 0 8.97 0 20c0 4.17 1.27 8.16 3.67 11.54 1.19 1.75 2.64 3.25 4.32 4.45C11.48 38.61 15.63 40 20 40c11.03 0 20-8.97 20-20 0-4.17-1.27-8.16-3.67-11.54ZM37.67 20c0 9.74-7.92 17.66-17.66 17.66-3.86 0-7.53-1.23-10.62-3.55a15.416 15.416 0 0 1-3.78-3.9c-2.13-3-3.26-6.53-3.26-10.21C2.34 10.26 10.26 2.34 20 2.34c3.86 0 7.53 1.23 10.62 3.55 1.47 1.05 2.74 2.36 3.78 3.9 2.13 3 3.26 6.53 3.26 10.21Z"/>
                     </svg>
                   </div>
-                  <div className={`${headerStyles.logotype} fs-5`}>Stephanie Shields</div>
+                  <div className={`${headerStyles.logotype} fs-5 text-nowrap`}>Stephanie Shields</div>
                   {/* <div className="tagline text-lowercase">Senior UX Engineer</div> */}
                 </Link>
-                <ul className={`${headerStyles.navigation} list-inline d-flex mb-0`}>
+                <ul className={`${headerStyles.navigation} list-inline d-none d-lg-flex mb-0`}>
                   <li className="list-inline-item mx-3">
                     <Link to="/about" className="link-body-emphasis text-decoration-none">About</Link>
                   </li>
@@ -56,20 +62,67 @@ const Header = () => {
               </div>
             </div>
             <div className="g-col-3">
-              <ul className="list-inline d-flex h-100 align-items-center justify-content-end mb-0">
-                <li className="list-inline-item me-3">
-                  <a href="https://www.linkedin.com/in/steph-shields/" target="_blank" className="d-inline-block">
-                    <FontAwesomeIcon icon={faLinkedin} size="2xl" />
-                    <span className="visually-hidden">LinkedIn</span>
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="https://github.com/stephanie-shields" target="_blank" className="d-inline-block">
-                    <FontAwesomeIcon icon={faGithub} size="2xl" />
-                    <span className="visually-hidden">GitHub</span>
-                  </a>
-                </li>
-              </ul>
+              <div className="d-flex justify-content-end align-items-center">
+                <ul className="list-inline d-none d-lg-flex h-100 align-items-center justify-content-end mb-0">
+                  <li className="list-inline-item me-3">
+                    <a href="https://www.linkedin.com/in/steph-shields/" target="_blank" className="d-inline-block">
+                      <FontAwesomeIcon icon={faLinkedin} size="2xl" />
+                      <span className="visually-hidden">LinkedIn</span>
+                    </a>
+                  </li>
+                  <li className="list-inline-item">
+                    <a href="https://github.com/stephanie-shields" target="_blank" className="d-inline-block">
+                      <FontAwesomeIcon icon={faGithub} size="2xl" />
+                      <span className="visually-hidden">GitHub</span>
+                    </a>
+                  </li>
+                </ul>
+                <button className={`${headerStyles.menuButton} btn btn-gradient fs-5 lh-1 d-lg-none`} onClick={handleShow}>
+                  <FontAwesomeIcon icon={faBars} />
+                  <span className="visually-hidden">Menu</span>
+                </button>
+              </div>
+              <Offcanvas show={show} onHide={handleClose} placement={'end'}>
+                <Offcanvas.Header closeButton>
+                  <Offcanvas.Title>
+                    <span className="visually-hidden">Menu</span>
+                  </Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body className="px-0">
+                  <ul className={`${headerStyles.mobileNavigation} d-flex flex-column list-unstyled mb-0`}>
+                    <li className="d-flex">
+                      <Link to="/" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                        <span className="fw-semibold">Home</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                      </Link>
+                    </li>
+                    <li className="d-flex">
+                      <Link to="/about" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                        <span className="fw-semibold">About</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                      </Link>
+                    </li>
+                    <li className="d-flex">
+                      <Link to="/work" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                        <span className="fw-semibold">Work</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                      </Link>
+                    </li>
+                    <li className="d-flex">
+                      <Link to="/capabilities" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                        <span className="fw-semibold">Capabilities</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                      </Link>
+                    </li>
+                    <li className="d-flex">
+                      <Link to="/process" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                        <span className="fw-semibold">Process</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                      </Link>
+                    </li>
+                  </ul>
+                </Offcanvas.Body>
+              </Offcanvas>
             </div>
           </div>
         </div>
