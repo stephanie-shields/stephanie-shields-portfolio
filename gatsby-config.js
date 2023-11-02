@@ -7,8 +7,7 @@ module.exports = {
     "gatsby-plugin-sass", 
     "gatsby-plugin-image", 
     "gatsby-plugin-react-helmet", 
-    "gatsby-plugin-sitemap", 
-    "gatsby-plugin-sharp", 
+    "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp", 
     {
       resolve: 'gatsby-source-filesystem',
@@ -42,6 +41,14 @@ module.exports = {
         short_name: `Stephanie Shields`,
         description: `The new and improved Stephanie Shields portfolio website.`,
         icon: `./src/images/favicon.png`
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 100,
+        },
       },
     },
   ],

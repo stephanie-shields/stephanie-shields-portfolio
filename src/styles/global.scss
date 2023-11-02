@@ -34,6 +34,14 @@ $headings-color: #1b1b1b;
 $display-font-family: 'PT Serif', sans-serif;
 $display-font-weight: 700;
 
+// Buttons + Forms
+
+$input-btn-padding-y-lg: .75rem;
+$input-btn-padding-x-lg: 1.5rem;
+$input-btn-font-size-lg: 1rem;
+
+$btn-font-weight: 600;
+
 // Components
 
 $border-color: $gray-100;
@@ -43,3 +51,29 @@ $border-color: $gray-100;
 $card-title-color: $headings-color;
 
 @import "~bootstrap/scss/bootstrap";
+
+.btn-gradient {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-focus-shadow-rgb: 253, 68, 150;
+  --bs-btn-active-color: #fff;
+  background: linear-gradient(90deg, #be32d0 0%, #fd4496 50%);
+  transition: background-position 0.2s ease-out;
+  background-size: 200% auto;
+  background-position: 0 0;
+}
+
+.btn-gradient:hover,
+.btn-gradient:focus-visible {
+  background-position: 100% 0;
+}
+
+.btn-check:checked + .btn-gradient,
+:not(.btn-check) + .btn-gradient:active,
+.btn-gradient:first-child:active,
+.btn-gradient.active,
+.btn-gradient.show {
+  background: #d72d79;
+}

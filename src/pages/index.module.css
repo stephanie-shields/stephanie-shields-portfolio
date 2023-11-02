@@ -20,7 +20,7 @@
   background: linear-gradient(90deg, rgba(190,50,208,1) 0%, rgba(243,81,49,1) 100%);
   position: absolute;
   top: -55%;
-  right: -40%;
+  right: -45%;
 }
 
 .stripes, .stripes span {
@@ -96,4 +96,17 @@
   left: 0;
   width: 100%;
   background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.hero-image {
+  max-width: 304px;
+  position: relative;
+}
+
+.hero-icon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: -64px;
+  bottom: 56px;
 }
