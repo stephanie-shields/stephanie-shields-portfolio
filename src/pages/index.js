@@ -12,6 +12,7 @@ import 'swiper/scss/a11y';
 import * as indexStyles from "./index.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { StaticImage } from "gatsby-plugin-image";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -38,22 +39,34 @@ class IndexPage extends React.Component {
           <section className="container hero">
             <div className="grid py-5">
               <div className="g-col-12 g-col-xl-6">
-                <h1 className="display-5 mb-4">
-                  <span className={`fs-4 d-block mb-3 text-body fw-normal ${indexStyles.heroGreeting}`}>&#128075; Hello, I'm Stephanie</span>
-                  <mark className={`${indexStyles.heroHighlight}`}>I design and build impactful digital solutions</mark>
-                </h1>
-                <p className="lead mb-0">Proven ability to lead multidisciplinary teams, manage key stakeholder relationships, and deliver products that enhance user satisfaction and business objectives.</p>
-                <div className="d-flex mt-4">
-                  <Link to="/work" className="btn btn-primary me-3">See My Work</Link>
-                  <a className="btn btn-link px-0" href="https://www.linkedin.com/in/steph-shields/" target="_blank">
-                    <span>Get in Touch</span>
-                    <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
-                  </a>
+                <div className={`${indexStyles.heroContent} rounded-4`}>
+                  <h1 className="display-5 mb-4">
+                    <span className={`fs-4 d-block mb-3 text-body fw-light ${indexStyles.heroGreeting}`}>&#128075; Hello, I'm Stephanie</span>
+                    <mark className={`${indexStyles.heroHighlight}`}>I design and build impactful digital solutions</mark>
+                  </h1>
+                  <p className="lead mb-0">Proven ability to lead multidisciplinary teams, manage key stakeholder relationships, and deliver products that enhance user satisfaction and business objectives.</p>
+                  <div className="d-flex mt-4">
+                    <Link to="/work" className="btn btn-gradient btn-lg me-3">See My Work</Link>
+                    <a className="btn btn-lg text-primary px-0" href="https://www.linkedin.com/in/steph-shields/" target="_blank">
+                      <span>Get in Touch</span>
+                      <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="g-col-12 g-col-xl-6">
+                <div className="w-100 d-flex justify-content-center pt-5">
+                  <div className={`${indexStyles.heroImage}`}>
+                    <StaticImage src="../images/self-picture.png" alt="Profile Picture" />
+                    <div className={`${indexStyles.heroIcon} bg-white border rounded-circle d-flex justify-content-center align-items-center fs-2 shadow`}>
+                      <span>&#128155;</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-          <section className="container mt-5">
+          <section className="container">
             <h2 className="mb-4">&#10024; Public Work</h2>
             <div className="mb-5">
               <Swiper
@@ -115,7 +128,7 @@ class IndexPage extends React.Component {
           <section className="container my-5">
             <div className="grid">
               <div className="g-col-6">
-                <div className="border bg-white rounded-5 p-4">
+                <div className="border bg-white rounded-5 p-4 h-100">
                   <div className="px-2 py-3">
                     <h2>&#128293; Capabilities</h2>
                     <p>Collaborating across disciplines to ensure a cohesive product experience that truly addresses user needs.</p>
@@ -124,7 +137,7 @@ class IndexPage extends React.Component {
                 </div>
               </div>
               <div className="g-col-6">
-                <div className="border bg-white rounded-5 py-5 px-4">
+                <div className="border bg-white rounded-5 py-5 px-4 h-100">
                   <h2>&#128170; Design Process</h2>
                   <p>The foundation of a successful product is built on a diverse blend of methods and technologies.</p>
                   <Link to="/process" className="btn btn-primary">Learn More</Link>
@@ -145,7 +158,7 @@ class IndexPage extends React.Component {
                     Next
                   </button>
                 </div>
-                <a className="btn btn-link px-0" href="https://github.com/stephanie-shields" target="_blank" role="button">
+                <a className="btn text-primary px-0" href="https://github.com/stephanie-shields" target="_blank" role="button">
                   <span>Visit My GitHub</span>
                   <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                 </a>
