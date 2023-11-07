@@ -5,7 +5,7 @@ import * as projectCardStyles from './ProjectCard.module.css';
 
 const ProjectCard = ({ projectImage, projectImageAlt, projectTitle, projectText, projectLink, projectBadges, projectIndex }) => {
   return (
-    <Link className={`${projectCardStyles[`projectCard${projectIndex}`]} card border-0 mb-3 position-relative`} to={projectLink}>
+    <Link className={`${projectCardStyles[`projectCard${projectIndex}`]} ${projectCardStyles.projectCard} card border-0 mb-3 position-relative`} to={projectLink}>
       <div className={`${projectCardStyles.projectCardTop} card-img-top p-3 rounded-3 text-center`}>
         {projectImage && 
           <img src={projectImage} className="card-img-top" alt={projectImageAlt} />
