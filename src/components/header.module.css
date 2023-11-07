@@ -49,3 +49,12 @@
   background-size: 8px 1px;
   content: "";
 }
+
+.mobile-navigation a {
+  text-decoration: none;
+  color: var(--bs-emphasis-color);
+}
+
+.mobile-navigation a:hover {
+  color: var(--bs-primary);
+}

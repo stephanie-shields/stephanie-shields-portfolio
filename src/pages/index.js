@@ -90,35 +90,40 @@ class IndexPage extends React.Component {
                     projectTitle={projects[0].projectTitle}
                     projectLink={projects[0].projectLink}
                     projectBadges={projects[0].projectBadges}
-                    projectText={projects[0].projectText} />
+                    projectText={projects[0].projectText}
+                    projectIndex="0" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <ProjectCard
                     projectTitle={projects[1].projectTitle}
                     projectLink={projects[1].projectLink}
                     projectBadges={projects[1].projectBadges}
-                    projectText={projects[1].projectText} />
+                    projectText={projects[1].projectText}
+                    projectIndex="1" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <ProjectCard
                     projectTitle={projects[2].projectTitle}
                     projectLink={projects[2].projectLink}
                     projectBadges={projects[2].projectBadges}
-                    projectText={projects[2].projectText} />
+                    projectText={projects[2].projectText}
+                    projectIndex="2" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <ProjectCard
                     projectTitle={projects[3].projectTitle}
                     projectLink={projects[3].projectLink}
                     projectBadges={projects[3].projectBadges}
-                    projectText={projects[3].projectText} />
+                    projectText={projects[3].projectText}
+                    projectIndex="3" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <ProjectCard
                     projectTitle={projects[4].projectTitle}
                     projectLink={projects[4].projectLink}
                     projectBadges={projects[4].projectBadges}
-                    projectText={projects[4].projectText} />
+                    projectText={projects[4].projectText}
+                    projectIndex="4" />
                 </SwiperSlide>
               </Swiper>
               <button className="btn btn-outline-primary me-2 swiper-nav-prev">

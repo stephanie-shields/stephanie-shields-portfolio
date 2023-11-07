@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronRight, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import * as headerStyles from './header.module.css';
+import * as headerStyles from './Header.module.css';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function Header() {
@@ -91,31 +91,31 @@ function Header() {
                 <Offcanvas.Body className="px-0">
                   <ul className={`${headerStyles.mobileNavigation} d-flex flex-column list-unstyled mb-0`}>
                     <li className="d-flex">
-                      <Link to="/" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                      <Link to="/" className="p-3 w-100 d-flex justify-content-between align-items-center">
                         <span className="fw-semibold">Home</span>
                         <FontAwesomeIcon icon={faChevronRight} />
                       </Link>
                     </li>
                     <li className="d-flex">
-                      <Link to="/about" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                      <Link to="/about" className="p-3 w-100 d-flex justify-content-between align-items-center">
                         <span className="fw-semibold">About</span>
                         <FontAwesomeIcon icon={faChevronRight} />
                       </Link>
                     </li>
                     <li className="d-flex">
-                      <Link to="/work" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                      <Link to="/work" className="p-3 w-100 d-flex justify-content-between align-items-center">
                         <span className="fw-semibold">Work</span>
                         <FontAwesomeIcon icon={faChevronRight} />
                       </Link>
                     </li>
                     <li className="d-flex">
-                      <Link to="/capabilities" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                      <Link to="/capabilities" className="p-3 w-100 d-flex justify-content-between align-items-center">
                         <span className="fw-semibold">Capabilities</span>
                         <FontAwesomeIcon icon={faChevronRight} />
                       </Link>
                     </li>
                     <li className="d-flex">
-                      <Link to="/process" className="link-body-emphasis text-decoration-none p-3 w-100 d-flex justify-content-between align-items-center">
+                      <Link to="/process" className="p-3 w-100 d-flex justify-content-between align-items-center">
                         <span className="fw-semibold">Process</span>
                         <FontAwesomeIcon icon={faChevronRight} />
                       </Link>
