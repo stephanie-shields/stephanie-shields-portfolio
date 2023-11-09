@@ -11,7 +11,7 @@ import 'swiper/scss';
 import 'swiper/scss/a11y';
 import * as indexStyles from "./index.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { StaticImage } from "gatsby-plugin-image";
 
 class IndexPage extends React.Component {
@@ -71,7 +71,19 @@ class IndexPage extends React.Component {
             </div>
           </section>
           <section className="container">
-            <h2 className="mb-4">&#10024; Public Work</h2>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h2 className="mb-0">&#10024; Public Work</h2>
+              <div className={`${indexStyles.projectNavigation} ms-3`}>
+                <button className="btn btn-outline-dark me-2 swiper-nav-prev rounded-circle">
+                  <span className="visually-hidden">Previous</span>
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                <button className="btn btn-dark swiper-nav-next rounded-circle">
+                  <span className="visually-hidden">Next</span>
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+              </div>
+            </div>
             <div className="mb-5">
               <Swiper
                 modules={[Navigation, A11y]}
@@ -126,12 +138,6 @@ class IndexPage extends React.Component {
                     projectIndex="4" />
                 </SwiperSlide>
               </Swiper>
-              <button className="btn btn-outline-primary me-2 swiper-nav-prev">
-                Previous
-              </button>
-              <button className="btn btn-primary swiper-nav-next">
-                Next
-              </button>
             </div>
           </section>
           <section className="container my-5">
