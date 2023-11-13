@@ -15,7 +15,7 @@ $gray-800: #2d2e2f;
 $gray-900: #1c1d1f;
 
 $primary: #be32d0;
-$secondary: #f4b2ff;
+$secondary: #fbdcff;
 
 // Body
 
@@ -36,11 +36,14 @@ $display-font-weight: 700;
 
 // Buttons + Forms
 
+$input-btn-padding-y: .5rem;
+$input-btn-padding-x: 1rem;
+
 $input-btn-padding-y-lg: .75rem;
 $input-btn-padding-x-lg: 1.5rem;
 $input-btn-font-size-lg: 1rem;
 
-$btn-font-weight: 600;
+$btn-font-weight: 500;
 
 // Components
 

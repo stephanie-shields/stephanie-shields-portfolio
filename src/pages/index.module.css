@@ -26,9 +26,11 @@
 
 @media (min-width: 1200px) {
   .stripes-container {
-    top: -55%;
+    /* 1400 / 20 = 70; 70% = 910 */
+    top: -980px;
     left: auto;
-    right: -45%;
+    /* 1400 / 20 = 70; 40% = 560 */
+    right: -560px; 
   }
 }
 
@@ -156,4 +158,26 @@
 .project-navigation :global(.btn) {
   width: 40px;
   height: 40px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-container {
+  background: linear-gradient(334deg, #BE32D0, #0050D8);
+  background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
