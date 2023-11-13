@@ -88,8 +88,20 @@ class IndexPage extends React.Component {
               <Swiper
                 modules={[Navigation, A11y]}
                 autoHeight={true}
-                spaceBetween={32}
-                slidesPerView={3}
+                breakpoints={{
+                  576: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                  },
+                }}
                 navigation={{
                   prevEl: '.swiper-nav-prev',
                   nextEl: '.swiper-nav-next'
@@ -138,24 +150,33 @@ class IndexPage extends React.Component {
                     projectIndex="4" />
                 </SwiperSlide>
               </Swiper>
+              <Link to="/work" className="btn btn-outline-dark border-2">View All Work</Link>
             </div>
           </section>
-          <section className="container my-5">
-            <div className="grid">
-              <div className="g-col-6">
-                <div className="border bg-white rounded-5 p-4 h-100">
-                  <div className="px-2 py-3">
-                    <h2>&#128293; Capabilities</h2>
-                    <p>Collaborating across disciplines to ensure a cohesive product experience that truly addresses user needs.</p>
-                    <Link to="/capabilities" className="btn btn-primary">Learn More</Link>
+          <section className={`${indexStyles.gradientContainer} py-5`}>
+            <div className="container my-4">
+              <div className="grid">
+                <div className="g-col-12 g-col-lg-6 pe-lg-1">
+                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg">
+                    <div className="grid px-3 py-4">
+                      <div className="g-col-12 g-col-xl-8">
+                        <h2 className="mb-3">&#128293; Capabilities</h2>
+                        <p className="mb-4">Collaborating across disciplines to ensure a cohesive product experience that truly addresses user needs.</p>
+                        <Link to="/capabilities" className="btn btn-gradient">Learn More</Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="g-col-6">
-                <div className="border bg-white rounded-5 py-5 px-4 h-100">
-                  <h2>&#128170; Design Process</h2>
-                  <p>The foundation of a successful product is built on a diverse blend of methods and technologies.</p>
-                  <Link to="/process" className="btn btn-primary">Learn More</Link>
+                <div className="g-col-12 g-col-lg-6 ps-lg-1">
+                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg">
+                    <div className="grid px-3 py-4">
+                      <div className="g-col-12 g-col-xl-8">
+                        <h2 className="mb-3">&#128170; Design Process</h2>
+                        <p className="mb-4">The foundation of a successful product is built on a diverse blend of methods and technologies.</p>
+                        <Link to="/process" className="btn btn-gradient">Learn More</Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
