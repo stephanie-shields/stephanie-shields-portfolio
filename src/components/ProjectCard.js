@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import BadgeGroup from './BadgeGroup';
-import * as projectCardStyles from './ProjectCard.module.css';
+import * as projectCardStyles from './ProjectCard.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectCard = ({ projectImage, projectImageAlt, projectTitle, projectText, projectLink, projectBadges, projectIndex }) => {
   return (
