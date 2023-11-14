@@ -1,0 +1,36 @@
+@import "./../styles/custom-variables";
+
+.process-graphic {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 352px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  > .process-graphic-shape:nth-child(7n+1),
+  > .process-graphic-shape:nth-child(7n+2),
+  > .process-graphic-shape:nth-child(7n+3) {
+    background: $theme-color-1;
+  }
+
+  > .process-graphic-shape:nth-child(7n+4),
+  > .process-graphic-shape:nth-child(7n+5) {
+    background: #783CB9;
+  }
+
+  > .process-graphic-shape:nth-child(7n+6),
+  > .process-graphic-shape:nth-child(7n+7) {
+    background: $theme-color-3;
+  }
+}
+
+.process-graphic-shape {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

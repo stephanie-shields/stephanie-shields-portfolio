@@ -9,10 +9,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/a11y';
-import * as indexStyles from "./index.module.css";
+import * as indexStyles from "./index.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { StaticImage } from "gatsby-plugin-image";
+import ProcessGraphic from "../components/ProcessGraphic";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -168,7 +169,7 @@ class IndexPage extends React.Component {
                   </div>
                 </div>
                 <div className="g-col-12 g-col-lg-6 ps-lg-1">
-                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg">
+                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg position-relative">
                     <div className="grid px-3 py-4">
                       <div className="g-col-12 g-col-xl-8">
                         <h2 className="mb-3">&#128170; Design Process</h2>
@@ -176,6 +177,7 @@ class IndexPage extends React.Component {
                         <Link to="/process" className="btn btn-gradient">Learn More</Link>
                       </div>
                     </div>
+                    <ProcessGraphic />
                   </div>
                 </div>
               </div>

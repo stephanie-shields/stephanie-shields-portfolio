@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronRight, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import * as headerStyles from './Header.module.css';
+import * as headerStyles from './Header.module.scss';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function Header() {
