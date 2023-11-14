@@ -1,19 +1,29 @@
 import * as React from "react";
+import SVG from 'react-inlinesvg';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import { projects } from '../data/projects';
 import { github } from '../data/github';
-import Header from '../components/Header';
-import ProjectCard from '../components/ProjectCard';
-import GithubProjectCard from '../components/GithubProjectCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/a11y';
-import * as indexStyles from "./index.module.scss";
+import Header from '../components/Header';
+import ProjectCard from '../components/ProjectCard';
+import GithubProjectCard from '../components/GithubProjectCard';
+import ProcessGraphic from '../components/ProcessGraphic';
+import capabilitiesGraphic from '../images/capabilities-graphic.svg';
+import * as indexStyles from './index.module.scss';
+
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { StaticImage } from "gatsby-plugin-image";
-import ProcessGraphic from "../components/ProcessGraphic";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -158,8 +168,11 @@ class IndexPage extends React.Component {
             <div className="container my-4">
               <div className="grid">
                 <div className="g-col-12 g-col-lg-6 pe-lg-1">
-                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg">
-                    <div className="grid px-3 py-4">
+                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg position-relative overflow-hidden">
+                    <div className={`${indexStyles.capabilitiesGraphic}`}>
+                      <SVG src={capabilitiesGraphic} title="Capabilities Graphic" />
+                    </div>
+                    <div className="grid px-3 py-4 position-relative">
                       <div className="g-col-12 g-col-xl-8">
                         <h2 className="mb-3">&#128293; Capabilities</h2>
                         <p className="mb-4">Collaborating across disciplines to ensure a cohesive product experience that truly addresses user needs.</p>
@@ -169,15 +182,15 @@ class IndexPage extends React.Component {
                   </div>
                 </div>
                 <div className="g-col-12 g-col-lg-6 ps-lg-1">
-                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg position-relative">
-                    <div className="grid px-3 py-4">
+                  <div className="bg-white rounded-4 p-4 h-100 shadow-lg position-relative overflow-hidden">
+                    <ProcessGraphic />
+                    <div className="grid px-3 py-4 position-relative">
                       <div className="g-col-12 g-col-xl-8">
                         <h2 className="mb-3">&#128170; Design Process</h2>
                         <p className="mb-4">The foundation of a successful product is built on a diverse blend of methods and technologies.</p>
                         <Link to="/process" className="btn btn-gradient">Learn More</Link>
                       </div>
                     </div>
-                    <ProcessGraphic />
                   </div>
                 </div>
               </div>

@@ -66,13 +66,13 @@ $card-title-color: $headings-color;
 
 // 8. Add additional custom code here
 .btn-gradient {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #{$white};
   --bs-btn-border-color: transparent;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-disabled-color: #fff;
+  --bs-btn-hover-color: #{$white};
+  --bs-btn-disabled-color: #{$white};
   --bs-btn-focus-shadow-rgb: 253, 68, 150;
-  --bs-btn-active-color: #fff;
-  background: linear-gradient(90deg, #be32d0 0%, #fd4496 50%);
+  --bs-btn-active-color: #{$white};
+  background: linear-gradient(90deg, #{$theme-color-1} 0%, #{$theme-color-2} 50%);
   transition: background-position 0.2s ease-out;
   background-size: 200% auto;
   background-position: 0 0;

@@ -9,6 +9,7 @@
   position: absolute;
   right: 12px;
   bottom: 12px;
+  opacity: 0.1;
 
   > .process-graphic-shape:nth-child(7n+1),
   > .process-graphic-shape:nth-child(7n+2),
@@ -33,4 +34,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .process-graphic {
+    opacity: 1;
+  }
 }
