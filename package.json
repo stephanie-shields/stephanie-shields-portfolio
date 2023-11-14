@@ -37,6 +37,7 @@
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-inlinesvg": "^4.1.0",
     "sass": "^1.69.4",
     "swiper": "^11.0.3"
   },

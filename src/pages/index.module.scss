@@ -181,3 +181,22 @@
 		background-position: 0% 50%;
 	}
 }
+
+.capabilities-graphic {
+  position: absolute;
+  right: -104px;
+  bottom: -48px;
+  opacity: 0.2;
+}
+
+@media (min-width: 1200px) {
+  .capabilities-graphic {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1400px) {
+  .capabilities-graphic {
+    right: -64px;
+  }
+}
