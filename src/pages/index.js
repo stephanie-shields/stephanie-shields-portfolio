@@ -10,8 +10,8 @@ import 'swiper/scss';
 import 'swiper/scss/a11y';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
-import GithubProjectCard from '../components/GithubProjectCard';
 import ProcessGraphic from '../components/ProcessGraphic';
+import GithubProjectList from '../components/GithubProjectList';
 import capabilitiesGraphic from '../images/capabilities-graphic.svg';
 import * as indexStyles from './index.module.scss';
 
@@ -215,38 +215,7 @@ class IndexPage extends React.Component {
                 </a>
               </div>
               <div className="g-col-8">
-                <Swiper
-                  modules={[Navigation, A11y]}
-                  autoHeight={true}
-                  spaceBetween={0}
-                  slidesPerView={'auto'}
-                  navigation={{
-                    prevEl: '.github-nav-prev',
-                    nextEl: '.github-nav-next'
-                  }}
-                >
-                  <SwiperSlide className="w-auto h-100">
-                    <GithubProjectCard
-                      projectTitle={github[0].projectTitle}
-                      projectLink={github[0].projectLink}
-                      projectBadges={github[0].projectBadges}
-                      projectText={github[0].projectText} />
-                  </SwiperSlide>
-                  <SwiperSlide className="w-auto h-100">
-                    <GithubProjectCard
-                      projectTitle={github[1].projectTitle}
-                      projectLink={github[1].projectLink}
-                      projectBadges={github[1].projectBadges}
-                      projectText={github[1].projectText} />
-                  </SwiperSlide>
-                  <SwiperSlide className="w-auto h-100">
-                    <GithubProjectCard
-                      projectTitle={github[2].projectTitle}
-                      projectLink={github[2].projectLink}
-                      projectBadges={github[2].projectBadges}
-                      projectText={github[2].projectText} />
-                  </SwiperSlide>
-                </Swiper>
+                <GithubProjectList />
               </div>
             </div>
           </section>
