@@ -3,16 +3,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/a11y';
-import { github } from '../data/github';
 import GithubProjectCard from './GithubProjectCard';
 import fetchRepositories from '../api/fetch-repositories';
 
 const GithubProjectList = () => {
   const [repositories, setRepositories] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchRepositories().then(setRepositories);
-  }, []); // Empty dependency array means this runs once on mount
+    setIsLoading(true);
+    fetchRepositories().then(repos => {
+      setRepositories(repos);
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={``}>
@@ -26,27 +34,15 @@ const GithubProjectList = () => {
           nextEl: '.github-nav-next'
         }}
       >
-        <SwiperSlide className="w-auto h-100">
-          <GithubProjectCard
-            projectTitle={github[0].projectTitle}
-            projectLink={github[0].projectLink}
-            projectBadges={github[0].projectBadges}
-            projectText={github[0].projectText} />
-        </SwiperSlide>
-        <SwiperSlide className="w-auto h-100">
-          <GithubProjectCard
-            projectTitle={github[1].projectTitle}
-            projectLink={github[1].projectLink}
-            projectBadges={github[1].projectBadges}
-            projectText={github[1].projectText} />
-        </SwiperSlide>
-        <SwiperSlide className="w-auto h-100">
-          <GithubProjectCard
-            projectTitle={github[2].projectTitle}
-            projectLink={github[2].projectLink}
-            projectBadges={github[2].projectBadges}
-            projectText={github[2].projectText} />
-        </SwiperSlide>
+        {repositories.map(repo => (
+          <SwiperSlide className="w-auto h-100" key={repo.id}>
+            <GithubProjectCard
+              projectTitle={repo.name}
+              projectLink={repo.html_url}
+              projectBadges={repo.topics}
+              projectText={repo.description} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

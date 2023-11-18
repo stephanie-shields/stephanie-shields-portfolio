@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Stephanie Shields Portfolio`,
+    title: `Stephanie Shields | Senior Lead UX Engineer`,
+    description: `The new and improved Stephanie Shields portfolio website.`,
     siteUrl: `https://stephanie-shields.github.io/stephanie-shields-portfolio`
   },
   plugins: [
