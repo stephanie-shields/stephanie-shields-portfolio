@@ -16,7 +16,7 @@ const BadgeGroup = ({ badges, badgeBackround }) => {
       {badges && badges.length === 1 &&
         <>
           {badges.map((badge) =>
-            <Badge badgeText={badge} />
+            <Badge badgeText={badge} badgeBackround={badgeBackround} key={badge} />
           )}
         </>
       }

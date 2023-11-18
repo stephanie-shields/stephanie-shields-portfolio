@@ -19,7 +19,7 @@ function Header() {
           <div className="d-flex">
             <FontAwesomeIcon icon={faTriangleExclamation} className="mt-1 me-2 text-warning" />
             <p className="mb-0 text-body">
-              <small>Actively working on building my portfolio, feel free to check out the progress live here: <a href="https://github.com/stephanie-shields/stephanie-shields-portfolio" target="_blank" className="link-dark">github.com/stephanie-shields/stephanie-shields-portfolio</a></small>
+              <small>Actively working on building my portfolio, feel free to check out the progress live here: <a href="https://github.com/stephanie-shields/stephanie-shields-portfolio" target="_blank" rel="noreferrer" className="link-dark">github.com/stephanie-shields/stephanie-shields-portfolio</a></small>
             </p>
           </div>
         </div>
@@ -65,13 +65,13 @@ function Header() {
               <div className="d-flex justify-content-end align-items-center">
                 <ul className="list-inline d-none d-lg-flex h-100 align-items-center justify-content-end mb-0">
                   <li className="list-inline-item me-3">
-                    <a href="https://www.linkedin.com/in/steph-shields/" target="_blank" className="d-inline-block">
+                    <a href="https://www.linkedin.com/in/steph-shields/" target="_blank" rel="noreferrer" className="d-inline-block">
                       <FontAwesomeIcon icon={faLinkedin} size="2xl" />
                       <span className="visually-hidden">LinkedIn</span>
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a href="https://github.com/stephanie-shields" target="_blank" className="d-inline-block">
+                    <a href="https://github.com/stephanie-shields" target="_blank" rel="noreferrer" className="d-inline-block">
                       <FontAwesomeIcon icon={faGithub} size="2xl" />
                       <span className="visually-hidden">GitHub</span>
                     </a>

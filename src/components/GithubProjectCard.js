@@ -3,7 +3,7 @@ import BadgeGroup from './BadgeGroup';
 
 const GithubProjectCard = ({ projectTitle, projectLink, projectBadges }) => {
   return (
-    <a className="card p-3 mb-3 mx-3 rounded-4 h-100" href={projectLink} target="_blank" role="button" style={{width: "300px"}}>
+    <a className="card p-3 mb-3 mx-3 rounded-4 h-100" href={projectLink} target="_blank" rel="noreferrer" role="button" style={{width: "300px"}}>
       <div className="card-body">
         <h3 className="card-title fs-5">{projectTitle}</h3>
         <BadgeGroup badges={projectBadges} badgeBackround={`text-body bg-info-subtle border-0`} />
