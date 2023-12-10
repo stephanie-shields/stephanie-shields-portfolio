@@ -1,14 +1,15 @@
 import * as React from "react";
 import PageLayout from '../components/PageLayout';
-import ComingSoon from "../components/ComingSoon";
+import TechStackList from "../components/TechStackList";
+// import ComingSoon from "../components/ComingSoon";
 
 const TechStackPage = () => {
   return (
     <PageLayout
       pageTitle="Tech Stack">
-      <ComingSoon></ComingSoon>
+      <TechStackList />
     </PageLayout>
-  )
-}
+  );
+};
 
-export default TechStackPage
+export default TechStackPage;

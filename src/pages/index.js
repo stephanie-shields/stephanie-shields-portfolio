@@ -2,16 +2,13 @@ import * as React from "react";
 import SVG from 'react-inlinesvg';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { projects } from '../data/projects';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, A11y } from 'swiper/modules';
-import 'swiper/scss';
-import 'swiper/scss/a11y';
 import { Seo } from "../components/Seo";
 import Header from '../components/Header';
-import ProjectCard from '../components/ProjectCard';
+import Footer from '../components/Footer';
+import ProjectList from '../components/ProjectList';
 import ProcessGraphic from '../components/ProcessGraphic';
 import GithubProjectList from '../components/GithubProjectList';
+import TechStackList from '../components/TechStackList';
 import capabilitiesGraphic from '../images/capabilities-graphic.svg';
 import * as indexStyles from './index.module.scss';
 
@@ -42,7 +39,7 @@ const IndexPage = () => {
             <span />
           </div>
         </div>
-        <section className="container hero">
+        <section className="container">
           <div className="grid py-5">
             <div className="g-col-12 g-col-xl-6">
               <h1 className="display-5 mb-4">
@@ -91,71 +88,7 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="mb-5">
-            <Swiper
-              modules={[Navigation, A11y]}
-              autoHeight={true}
-              breakpoints={{
-                576: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                992: {
-                  slidesPerView: 3,
-                  spaceBetween: 32,
-                },
-              }}
-              navigation={{
-                prevEl: '.swiper-nav-prev',
-                nextEl: '.swiper-nav-next'
-              }}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              <SwiperSlide>
-                <ProjectCard
-                  projectTitle={projects[0].projectTitle}
-                  projectLink={projects[0].projectLink}
-                  projectBadges={projects[0].projectBadges}
-                  projectText={projects[0].projectText}
-                  projectIndex="0" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProjectCard
-                  projectTitle={projects[1].projectTitle}
-                  projectLink={projects[1].projectLink}
-                  projectBadges={projects[1].projectBadges}
-                  projectText={projects[1].projectText}
-                  projectIndex="1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProjectCard
-                  projectTitle={projects[2].projectTitle}
-                  projectLink={projects[2].projectLink}
-                  projectBadges={projects[2].projectBadges}
-                  projectText={projects[2].projectText}
-                  projectIndex="2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProjectCard
-                  projectTitle={projects[3].projectTitle}
-                  projectLink={projects[3].projectLink}
-                  projectBadges={projects[3].projectBadges}
-                  projectText={projects[3].projectText}
-                  projectIndex="3" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProjectCard
-                  projectTitle={projects[4].projectTitle}
-                  projectLink={projects[4].projectLink}
-                  projectBadges={projects[4].projectBadges}
-                  projectText={projects[4].projectText}
-                  projectIndex="4" />
-              </SwiperSlide>
-            </Swiper>
+            <ProjectList />
             <Link to="/work" className="btn btn-outline-dark border-2">View All Work</Link>
           </div>
         </section>
@@ -191,17 +124,19 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="container my-5">
+        <section className="container my-5 py-5">
           <div className="grid">
-            <div className="g-col-4">
+            <div className="g-col-12 g-col-lg-4">
               <h2 className="">&#128640; GitHub</h2>
-              <p className="mb-4">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
+              <p className="mb-4 pe-5">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
               <div className="d-flex mb-3">
-                <button className="btn btn-outline-primary me-2 github-nav-prev">
-                  Previous
+                <button className="btn btn-outline-dark me-2 github-nav-prev rounded-circle">
+                  <span className="visually-hidden">Previous</span>
+                  <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
-                <button className="btn btn-primary github-nav-next">
-                  Next
+                <button className="btn btn-dark github-nav-next rounded-circle">
+                  <span className="visually-hidden">Next</span>
+                  <FontAwesomeIcon icon={faChevronRight} />
                 </button>
               </div>
               <a className="btn text-primary px-0" href="https://github.com/stephanie-shields" target="_blank" rel="noreferrer" role="button">
@@ -209,26 +144,25 @@ const IndexPage = () => {
                 <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
               </a>
             </div>
-            <div className="g-col-8">
+            <div className="g-col-12 g-col-lg-8">
               <GithubProjectList />
             </div>
           </div>
         </section>
-        <section className="container my-5">
-          <div className="grid">
-            <div className="g-col-4">
-              <h2 className="">&#9996;&#65039; Tech Stack</h2>
-              <p>Explore my favorite technology picks and frameworks.</p>
-              <Link to="/tech-stack" className="btn btn-primary">Learn More</Link>
+        <section className="position-relative">
+          <div className="container my-5">
+            <div className="grid">
+              <div className="g-col-4">
+                <h2 className="">&#9996;&#65039; Tech Stack</h2>
+                <p>Explore my favorite technology picks and frameworks.</p>
+                <Link to="/tech-stack" className="btn btn-primary">Learn More</Link>
+              </div>
             </div>
           </div>
+          <TechStackList techLogoOnly />
         </section>
       </main>
-      <footer>
-        <div className="container">
-          <p className="text-center mb-5">&copy; 2023 Stephanie Shields | Senior Lead UX Engineer</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
