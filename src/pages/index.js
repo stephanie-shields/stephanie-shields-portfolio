@@ -127,14 +127,14 @@ const IndexPage = () => {
         <section className="container my-5 py-5">
           <div className="grid">
             <div className="g-col-12 g-col-lg-4">
-              <h2 className="">&#128640; GitHub</h2>
+              <h2 className="mb-3">&#128640; GitHub</h2>
               <p className="mb-4 pe-5">Dive into my GitHub to discover a showcase of my design and development expertise.</p>
               <div className="d-flex mb-3">
-                <button className="btn btn-outline-dark me-2 github-nav-prev rounded-circle">
+                <button className="btn btn-gradient me-2 github-nav-prev rounded-circle">
                   <span className="visually-hidden">Previous</span>
                   <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
-                <button className="btn btn-dark github-nav-next rounded-circle">
+                <button className="btn btn-gradient github-nav-next rounded-circle">
                   <span className="visually-hidden">Next</span>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </button>

@@ -2,4 +2,7 @@
 
 .github-card {
   text-decoration: none;
+  border: 4px solid transparent;
+  position: relative;
+  background: linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(190, 50, 208, .1), rgba(0, 80, 216, .1)) border-box;
 }
