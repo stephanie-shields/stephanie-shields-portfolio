@@ -64,7 +64,7 @@ const IndexPage = () => {
                   <div className={`${indexStyles.polygonShapeBottom}`}>
                     <svg width="154" height="145" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.618 56.806 77 4.944l71.382 51.862-27.265 83.915H32.883L5.618 56.806Z" stroke="#fff" strokeOpacity=".5" strokeWidth="8"/></svg>
                   </div>
-                  <StaticImage src="../images/self-picture.png" alt="Profile Picture" />
+                  <StaticImage src="../images/self-picture.png" />
                   <div className={`${indexStyles.heroIcon} bg-white border rounded-circle d-flex justify-content-center align-items-center fs-2 shadow`}>
                     <span>&#128155;</span>
                   </div>
