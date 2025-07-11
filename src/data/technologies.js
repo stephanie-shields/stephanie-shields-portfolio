@@ -1,5 +1,35 @@
 import htmlGraphic from '../images/technologies/html.svg';
 import cssGraphic from '../images/technologies/css.svg';
+import sassGraphic from '../images/technologies/sass.svg';
+import javascriptGraphic from '../images/technologies/javascript.svg';
+import reactGraphic from '../images/technologies/react.svg';
+import angularGraphic from '../images/technologies/angular.svg';
+import vueGraphic from '../images/technologies/vue.svg';
+import storybookGraphic from '../images/technologies/storybook.svg';
+import gitGraphic from '../images/technologies/git.svg';
+import githubGraphic from '../images/technologies/github.svg';
+import gitlabGraphic from '../images/technologies/gitlab.svg';
+import npmGraphic from '../images/technologies/npm.svg';
+import visualStudioCodeGraphic from '../images/technologies/visual-studio-code.svg';
+import googleLighthouseGraphic from '../images/technologies/google-lighthouse.svg';
+import uswdsGraphic from '../images/technologies/uswds.svg';
+import googleMaterialDesignGraphic from '../images/technologies/google-material-design.svg';
+import bootstrapGraphic from '../images/technologies/bootstrap.svg';
+import figmaGraphic from '../images/technologies/figma.svg';
+import adobeXdGraphic from '../images/technologies/adobe-xd.svg';
+import sketchGraphic from '../images/technologies/sketch.svg';
+import adobeIllustratorGraphic from '../images/technologies/adobe-illustrator.svg';
+import adobePhotoshopGraphic from '../images/technologies/adobe-photoshop.svg';
+import muralGraphic from '../images/technologies/mural.svg';
+import axureGraphic from '../images/technologies/axure.svg';
+import optimalGraphic from '../images/technologies/optimal.svg';
+import medalliaGraphic from '../images/technologies/medallia.svg';
+import serviceNowGraphic from '../images/technologies/servicenow.svg';
+import jiraGraphic from '../images/technologies/jira.svg';
+import confluenceGraphic from '../images/technologies/confluence.svg';
+import trelloGraphic from '../images/technologies/trello.svg';
+import slackGraphic from '../images/technologies/slack.svg';
+import lumaSystemGraphic from '../images/technologies/luma-system.svg';
 
 export const technologies = [
   {
@@ -24,7 +54,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/sass.svg"
+    techLogo: sassGraphic
   },
   {
     id: "javascript",
@@ -32,7 +62,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/javascript.svg"
+    techLogo: javascriptGraphic
   },
   {
     id: "react",
@@ -40,7 +70,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/react.svg"
+    techLogo: reactGraphic
   },
   {
     id: "angular",
@@ -48,7 +78,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/angular.svg"
+    techLogo: angularGraphic
   },
   {
     id: "vue",
@@ -56,7 +86,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/vue.svg"
+    techLogo: vueGraphic
   },
   {
     id: "storybook",
@@ -64,7 +94,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/storybook.svg"
+    techLogo: storybookGraphic
   },
   {
     id: "git",
@@ -72,7 +102,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/git.svg"
+    techLogo: gitGraphic
   },
   {
     id: "github",
@@ -80,7 +110,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/github.svg"
+    techLogo: githubGraphic
   },
   {
     id: "gitlab",
@@ -88,7 +118,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/gitlab.svg"
+    techLogo: gitlabGraphic
   },
   {
     id: "npm",
@@ -96,7 +126,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/npm.svg"
+    techLogo: npmGraphic
   },
   {
     id: "visual-studio-code",
@@ -104,7 +134,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/visual-studio-code.svg"
+    techLogo: visualStudioCodeGraphic
   },
   {
     id: "google-lighthouse",
@@ -112,7 +142,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/google-lighthouse.svg"
+    techLogo: googleLighthouseGraphic
   },
   {
     id: "uswds",
@@ -120,7 +150,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/uswds.svg"
+    techLogo: uswdsGraphic
   },
   {
     id: "google-material-design",
@@ -128,7 +158,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/google-material-design.svg"
+    techLogo: googleMaterialDesignGraphic
   },
   {
     id: "bootstrap",
@@ -136,7 +166,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/bootstrap.svg"
+    techLogo: bootstrapGraphic
   },
   {
     id: "figma",
@@ -144,7 +174,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/figma.svg"
+    techLogo: figmaGraphic
   },
   {
     id: "adobe-xd",
@@ -152,7 +182,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/adobe-xd.svg"
+    techLogo: adobeXdGraphic
   },
   {
     id: "sketch",
@@ -160,7 +190,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/sketch.svg"
+    techLogo: sketchGraphic
   },
   {
     id: "adobe-illustrator",
@@ -168,7 +198,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/adobe-illustrator.svg"
+    techLogo: adobeIllustratorGraphic
   },
   {
     id: "adobe-photoshop",
@@ -176,7 +206,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/adobe-photoshop.svg"
+    techLogo: adobePhotoshopGraphic
   },
   {
     id: "mural",
@@ -184,7 +214,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/mural.svg"
+    techLogo: muralGraphic
   },
   {
     id: "axure",
@@ -192,7 +222,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/axure.svg"
+    techLogo: axureGraphic
   },
   {
     id: "optimal",
@@ -200,7 +230,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/optimal.svg"
+    techLogo: optimalGraphic
   },
   {
     id: "medallia",
@@ -208,7 +238,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "../images/technologies/medallia.svg"
+    techLogo: medalliaGraphic
   },
   {
     id: "service-now",
@@ -216,7 +246,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "../images/technologies/servicenow.svg"
+    techLogo: serviceNowGraphic
   },
   {
     id: "jira",
@@ -224,7 +254,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "../images/technologies/jira.svg"
+    techLogo: jiraGraphic
   },
   {
     id: "confluence",
@@ -232,7 +262,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "../images/technologies/confluence.svg"
+    techLogo: confluenceGraphic
   },
   {
     id: "trello",
@@ -240,7 +270,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "../images/technologies/trello.svg"
+    techLogo: trelloGraphic
   },
   {
     id: "slack",
@@ -248,7 +278,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "../images/technologies/slack.svg"
+    techLogo: slackGraphic
   },
   {
     id: "luma-system",
@@ -256,6 +286,6 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "../images/technologies/luma-system.svg"
+    techLogo: lumaSystemGraphic
   },
 ];
