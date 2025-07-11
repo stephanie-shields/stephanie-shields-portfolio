@@ -11,7 +11,7 @@ const TechStackList = ({techLogoOnly}) => {
     <ul className={`${techStackListStyles.techStackList}`}>
       {technologies.map(tech => (
         <li className={`${techStackListStyles.techStackItem}`} key={tech.id}>
-          <div className={`${techStackListStyles.techCard} card p-4`}>
+          <div className={`${techStackListStyles.techCard} card`}>
             <div className={`${techStackListStyles.techCardLogo} card-img-top`}>
               <img src={tech.techLogo} alt={tech.techDescription} />
             </div>
