@@ -19,7 +19,7 @@ function Header() {
           <div className="d-flex">
             <FontAwesomeIcon icon={faTriangleExclamation} className="mt-1 me-2 text-warning" />
             <p className="mb-0 text-body">
-              <small>Actively working on building my portfolio, feel free to check out the progress live here: <a href="https://github.com/stephanie-shields/stephanie-shields-portfolio" target="_blank" rel="noreferrer" className="link-dark">github.com/stephanie-shields/stephanie-shields-portfolio</a></small>
+              <small><strong>July 2025:</strong> Actively working on building my portfolio, feel free to check out the progress live here: <a href="https://github.com/stephanie-shields/stephanie-shields-portfolio" target="_blank" rel="noreferrer" className="link-dark">github.com/stephanie-shields/stephanie-shields-portfolio</a></small>
             </p>
           </div>
         </div>
