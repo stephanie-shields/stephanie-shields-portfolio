@@ -11,9 +11,9 @@ const TechStackList = ({techLogoOnly}) => {
     <ul className={`${techStackListStyles.techStackList}`}>
       {technologies.map(tech => (
         <li className={`${techStackListStyles.techStackItem}`} key={tech.id}>
-          <div className={`${techStackListStyles.techCard} card p-4`}>
+          <div className={`${techStackListStyles.techCard} card`}>
             <div className={`${techStackListStyles.techCardLogo} card-img-top`}>
-              <StaticImage src={`./../images/technologies/${tech.techLogo}`} alt={tech.techDescription} />
+              <img src={tech.techLogo} alt={tech.techDescription} />
             </div>
             {techLogoOnly &&
               <div className="visually-hidden">
