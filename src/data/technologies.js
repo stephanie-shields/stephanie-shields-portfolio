@@ -5,7 +5,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/html.svg"
+    techLogo: "../images/technologies/html.svg"
   },
   {
     id: "css",
@@ -13,7 +13,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/css.svg"
+    techLogo: "../images/technologies/css.svg"
   },
   {
     id: "sass",
@@ -21,7 +21,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/sass.svg"
+    techLogo: "../images/technologies/sass.svg"
   },
   {
     id: "javascript",
@@ -29,7 +29,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/javascript.svg"
+    techLogo: "../images/technologies/javascript.svg"
   },
   {
     id: "react",
@@ -37,7 +37,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/react.svg"
+    techLogo: "../images/technologies/react.svg"
   },
   {
     id: "angular",
@@ -45,7 +45,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/angular.svg"
+    techLogo: "../images/technologies/angular.svg"
   },
   {
     id: "vue",
@@ -53,7 +53,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/vue.svg"
+    techLogo: "../images/technologies/vue.svg"
   },
   {
     id: "storybook",
@@ -61,7 +61,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/storybook.svg"
+    techLogo: "../images/technologies/storybook.svg"
   },
   {
     id: "git",
@@ -69,7 +69,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/git.svg"
+    techLogo: "../images/technologies/git.svg"
   },
   {
     id: "github",
@@ -77,7 +77,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/github.svg"
+    techLogo: "../images/technologies/github.svg"
   },
   {
     id: "gitlab",
@@ -85,7 +85,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/gitlab.svg"
+    techLogo: "../images/technologies/gitlab.svg"
   },
   {
     id: "npm",
@@ -93,7 +93,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/npm.svg"
+    techLogo: "../images/technologies/npm.svg"
   },
   {
     id: "visual-studio-code",
@@ -101,7 +101,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/visual-studio-code.svg"
+    techLogo: "../images/technologies/visual-studio-code.svg"
   },
   {
     id: "google-lighthouse",
@@ -109,7 +109,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/google-lighthouse.svg"
+    techLogo: "../images/technologies/google-lighthouse.svg"
   },
   {
     id: "uswds",
@@ -117,7 +117,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/uswds.svg"
+    techLogo: "../images/technologies/uswds.svg"
   },
   {
     id: "google-material-design",
@@ -125,7 +125,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/google-material-design.svg"
+    techLogo: "../images/technologies/google-material-design.svg"
   },
   {
     id: "bootstrap",
@@ -133,7 +133,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "/images/technologies/bootstrap.svg"
+    techLogo: "../images/technologies/bootstrap.svg"
   },
   {
     id: "figma",
@@ -141,7 +141,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/figma.svg"
+    techLogo: "../images/technologies/figma.svg"
   },
   {
     id: "adobe-xd",
@@ -149,7 +149,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/adobe-xd.svg"
+    techLogo: "../images/technologies/adobe-xd.svg"
   },
   {
     id: "sketch",
@@ -157,7 +157,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/sketch.svg"
+    techLogo: "../images/technologies/sketch.svg"
   },
   {
     id: "adobe-illustrator",
@@ -165,7 +165,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/adobe-illustrator.svg"
+    techLogo: "../images/technologies/adobe-illustrator.svg"
   },
   {
     id: "adobe-photoshop",
@@ -173,7 +173,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/adobe-photoshop.svg"
+    techLogo: "../images/technologies/adobe-photoshop.svg"
   },
   {
     id: "mural",
@@ -181,7 +181,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/mural.svg"
+    techLogo: "../images/technologies/mural.svg"
   },
   {
     id: "axure",
@@ -189,7 +189,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/axure.svg"
+    techLogo: "../images/technologies/axure.svg"
   },
   {
     id: "optimal",
@@ -197,7 +197,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/optimal.svg"
+    techLogo: "../images/technologies/optimal.svg"
   },
   {
     id: "medallia",
@@ -205,7 +205,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Design",
-    techLogo: "/images/technologies/medallia.svg"
+    techLogo: "../images/technologies/medallia.svg"
   },
   {
     id: "service-now",
@@ -213,7 +213,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "/images/technologies/servicenow.svg"
+    techLogo: "../images/technologies/servicenow.svg"
   },
   {
     id: "jira",
@@ -221,7 +221,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "/images/technologies/jira.svg"
+    techLogo: "../images/technologies/jira.svg"
   },
   {
     id: "confluence",
@@ -229,7 +229,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "/images/technologies/confluence.svg"
+    techLogo: "../images/technologies/confluence.svg"
   },
   {
     id: "trello",
@@ -237,7 +237,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "/images/technologies/trello.svg"
+    techLogo: "../images/technologies/trello.svg"
   },
   {
     id: "slack",
@@ -245,7 +245,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "/images/technologies/slack.svg"
+    techLogo: "../images/technologies/slack.svg"
   },
   {
     id: "luma-system",
@@ -253,6 +253,6 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "",
-    techLogo: "/images/technologies/luma-system.svg"
+    techLogo: "../images/technologies/luma-system.svg"
   },
 ];
