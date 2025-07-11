@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import * as techStackListStyles from './TechStackList.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import SVG from 'react-inlinesvg';
 
 const TechStackList = ({techLogoOnly}) => {
 
@@ -13,7 +14,7 @@ const TechStackList = ({techLogoOnly}) => {
         <li className={`${techStackListStyles.techStackItem}`} key={tech.id}>
           <div className={`${techStackListStyles.techCard} card`}>
             <div className={`${techStackListStyles.techCardLogo} card-img-top`}>
-              <img src={tech.techLogo} alt={tech.techDescription} />
+              <SVG src={tech.techLogo} title={tech.techDescription} />
             </div>
             {techLogoOnly &&
               <div className="visually-hidden">
