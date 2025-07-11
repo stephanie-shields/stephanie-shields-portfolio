@@ -1,3 +1,6 @@
+import htmlGraphic from '../images/technologies/html.svg';
+import cssGraphic from '../images/technologies/css.svg';
+
 export const technologies = [
   {
     id: "html",
@@ -5,7 +8,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/html.svg"
+    techLogo: htmlGraphic
   },
   {
     id: "css",
@@ -13,7 +16,7 @@ export const technologies = [
     techDescription: "",
     techLink: "/",
     techType: "Development",
-    techLogo: "../images/technologies/css.svg"
+    techLogo: cssGraphic
   },
   {
     id: "sass",
