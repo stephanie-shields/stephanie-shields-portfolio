@@ -1,0 +1,151 @@
+import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { Menu, ChevronRight, X } from 'lucide-react'
+
+const LogoSVG = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" className="w-10 h-10 shrink-0">
+    <defs>
+      <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style={{ stopColor: '#be32d0', stopOpacity: 1 }} />
+        <stop offset="100%" style={{ stopColor: '#fd4496', stopOpacity: 1 }} />
+      </linearGradient>
+    </defs>
+    <path fill="url(#logo-gradient)" d="M18.96 22.36c-4.34-1.6-7.14-3.53-8.58-5.89L8.9 14.04l-.66 2.77c-1.36 5.72 1 11.47 5.74 13.98.71.35 1.84.85 3.38 1.15.82.15 1.61.22 2.4.22h.21l.3-.04c2.31-.62 3.67-2.63 3.49-5.14-.27-2.74-2.72-3.91-4.8-4.62Zm.81 7.46c-.65 0-1.3-.06-1.98-.18-1.24-.24-2.13-.63-2.74-.93-3.55-1.89-4.79-5.66-4.82-8.74 1.84 1.79 4.45 3.29 7.95 4.58 2.23.76 3.14 1.5 3.26 2.62.04.5.02 2.16-1.66 2.64ZM26.01 9.2c-.71-.35-1.83-.85-3.38-1.15-.82-.15-1.61-.22-2.4-.22h-.21l-.29.04c-2.31.62-3.68 2.63-3.49 5.14.27 2.74 2.71 3.91 4.8 4.62 4.33 1.6 7.14 3.53 8.58 5.89l1.48 2.43.65-2.77c1.36-5.72-1-11.47-5.74-13.98Zm3.76 10.82c-1.84-1.79-4.45-3.29-7.95-4.58-2.23-.76-3.14-1.5-3.25-2.62-.04-.49-.02-2.13 1.66-2.64.65 0 1.3.06 1.98.18 1.24.24 2.12.62 2.74.93 3.55 1.89 4.79 5.66 4.82 8.74Z" />
+    <path fill="url(#logo-gradient)" d="M36.33 8.46a17.589 17.589 0 0 0-4.32-4.45A19.854 19.854 0 0 0 20 0C8.97 0 0 8.97 0 20c0 4.17 1.27 8.16 3.67 11.54 1.19 1.75 2.64 3.25 4.32 4.45C11.48 38.61 15.63 40 20 40c11.03 0 20-8.97 20-20 0-4.17-1.27-8.16-3.67-11.54ZM37.67 20c0 9.74-7.92 17.66-17.66 17.66-3.86 0-7.53-1.23-10.62-3.55a15.416 15.416 0 0 1-3.78-3.9c-2.13-3-3.26-6.53-3.26-10.21C2.34 10.26 10.26 2.34 20 2.34c3.86 0 7.53 1.23 10.62 3.55 1.47 1.05 2.74 2.36 3.78 3.9 2.13 3 3.26 6.53 3.26 10.21Z" />
+  </svg>
+)
+
+const LinkedInIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  </svg>
+)
+
+const GitHubIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+  </svg>
+)
+
+const navLinks = [
+  { to: '/about', label: 'About' },
+  { to: '/work', label: 'Work' },
+  { to: '/capabilities', label: 'Capabilities' },
+  { to: '/process', label: 'Process' },
+]
+
+export default function Header() {
+  const [drawerOpen, setDrawerOpen] = useState(false)
+
+  return (
+    <>
+      {/* Main header */}
+      <header className="bg-white border-b border-gray-200 py-3">
+        <div className="container">
+          <div className="flex items-center justify-between py-1">
+            {/* Logo + desktop nav */}
+            <div className="flex items-center gap-10">
+              <Link to="/" className="flex items-center gap-2 no-underline group shrink-0">
+                <LogoSVG />
+                <span className="gradient-text text-xl font-bold whitespace-nowrap group-hover:opacity-75 transition-opacity">
+                  Stephanie Shields
+                </span>
+              </Link>
+
+              <nav className="hidden lg:flex items-center gap-8">
+                {navLinks.map(({ to, label }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    className={({ isActive }) =>
+                      `text-gray-700 font-medium no-underline hover:text-gray-900 transition-colors ${
+                        isActive ? 'text-gray-900 font-semibold' : ''
+                      }`
+                    }
+                  >
+                    {label}
+                  </NavLink>
+                ))}
+              </nav>
+            </div>
+
+            {/* Desktop social icons */}
+            <div className="hidden lg:flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/steph-shields/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon />
+              </a>
+              <a
+                href="https://github.com/stephanie-shields"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="GitHub"
+              >
+                <GitHubIcon />
+              </a>
+            </div>
+
+            {/* Mobile hamburger */}
+            <button
+              className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center btn-gradient"
+              onClick={() => setDrawerOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile drawer overlay */}
+      {drawerOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+          onClick={() => setDrawerOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile drawer panel */}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+          drawerOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        aria-hidden={!drawerOpen}
+      >
+        <div className="flex items-center justify-end p-4 border-b border-gray-100">
+          <button
+            className="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+            onClick={() => setDrawerOpen(false)}
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <nav>
+          <ul className="list-none m-0 p-0">
+            {[{ to: '/', label: 'Home' }, ...navLinks].map(({ to, label }) => (
+              <li key={to} className="border-b border-dashed border-gray-200">
+                <NavLink
+                  to={to}
+                  onClick={() => setDrawerOpen(false)}
+                  className="flex items-center justify-between px-6 py-4 font-semibold text-gray-800 no-underline hover:text-brand transition-colors"
+                >
+                  {label}
+                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
+  )
+}
