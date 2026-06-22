@@ -1,3 +1,15 @@
+# dependencies
 node_modules/
-.cache/
-public
+
+# pnpm
+pnpm-lock.yaml
+
+# Gatsby (legacy)
+apps/legacy/.cache/
+apps/legacy/public/
+
+# Vite (portfolio)
+apps/portfolio/dist/
+
+# misc
+.DS_Store
