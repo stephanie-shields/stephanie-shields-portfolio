@@ -1,72 +1,60 @@
+import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Astroid, FileCode2, Search, GitBranch, Settings } from 'lucide-react'
 import selfPicture from '../assets/self-picture.png'
 
-const PolygonSVG = () => (
-  <svg width="120" height="113" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M4.37 44.18 59.9 3.84l55.53 40.34-21.21 65.28H25.58L4.37 44.18Z"
-      stroke="#fff"
-      strokeOpacity=".45"
-      strokeWidth="7"
-    />
-  </svg>
-)
 
-function ProgressItem({
-  label, status, statusColor, progress, barColor,
-}: {
-  label: string; status: string; statusColor: string; progress: number; barColor: string
-}) {
-  return (
-    <div>
-      <div className="flex justify-between mb-1.5">
-        <span className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</span>
-        <span className="text-sm font-medium" style={{ color: statusColor }}>{status}</span>
-      </div>
-      <div className="h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.08)' }}>
-        <div className="h-full rounded-full" style={{ width: `${progress}%`, background: barColor }} />
-      </div>
-    </div>
-  )
+function TokenRow({ children }: { children: ReactNode }) {
+  return <div style={{ paddingLeft: '16px' }}>{children}</div>
 }
 
-function ProductMockup() {
-  const chips = ['#f472b6', '#d946b0', '#a855f7', '#818cf8', '#60a5fa', '#38bdf8', '#22d3ee']
+function TokensPanel() {
+  const mono = { fontFamily: "'IBM Plex Mono', monospace" }
+  const key = { color: '#8fb8f0' }
+  const str = { color: '#f791c1' }
+  const num = { color: '#c9a3ff' }
+  const punct = { color: '#6f5a78' }
+  const swatches = ['#be32d0', '#fd4496', '#0050d8', '#21c834', '#fbdcff']
+
+  const sidebarIcons = [
+    { Icon: FileCode2, active: true },
+    { Icon: Search, active: false },
+    { Icon: GitBranch, active: false },
+    { Icon: Settings, active: false },
+  ]
+
   return (
-    <div className="rounded-2xl overflow-hidden shadow-2xl w-full" style={{ background: '#0d0f1e' }}>
-      <div className="flex items-center justify-between px-5 py-3.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-        <div className="flex items-center gap-3.5">
-          <div className="flex gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#ff5f57' }} />
-            <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#ffbd2e' }} />
-            <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#28c840' }} />
-          </div>
-          <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>vellox · reverser</span>
-        </div>
-        <div className="flex items-center gap-1.5 text-xs font-medium" style={{ color: '#22d3ee' }}>
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#22d3ee' }} />
-          Running
-        </div>
+    <div className="flex rounded-lg overflow-hidden shadow-2xl w-full" style={{ background: '#1d1322', border: '1px solid #2e1f34' }}>
+      {/* Activity bar */}
+      <div className="flex flex-col items-center gap-4 py-4" style={{ background: '#150d18', borderRight: '1px solid #2e1f34', width: '44px', flexShrink: 0 }}>
+        {sidebarIcons.map(({ Icon, active }, i) => (
+          <Icon key={i} size={16} style={{ color: active ? '#fd4496' : '#6f5a78' }} />
+        ))}
       </div>
-      <div className="p-5">
-        <div className="mb-5">
-          <h3 className="text-white font-bold text-base mb-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-            Job #4821 — sample.dll
-          </h3>
-          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.38)' }}>
-            DLL exports · 14 selected · resume enabled
-          </p>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center justify-between px-4.5 py-3" style={{ borderBottom: '1px solid #2e1f34', ...mono, fontSize: '11px', color: '#6f5a78' }}>
+          <span>tokens/stephanie.json</span>
+          <span className="flex items-center gap-1.5" style={{ color: '#fd4496' }}>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#fd4496' }} />
+            live
+          </span>
         </div>
-        <div className="flex flex-col gap-4 mb-6">
-          <ProgressItem label="Unpack" status="Done" statusColor="rgba(255,255,255,0.55)" progress={100} barColor="#22d3ee" />
-          <ProgressItem label="Disassemble" status="Done" statusColor="#22d3ee" progress={100} barColor="#22d3ee" />
-          <ProgressItem label="Detect signatures" status="64%" statusColor="#f472b6" progress={64} barColor="#f472b6" />
+        <div className="px-4.5 py-4.5" style={{ ...mono, fontSize: '12.5px', lineHeight: 1.9 }}>
+          <div style={punct}>{'{'}</div>
+          <TokenRow><span style={key}>"role"</span><span style={punct}>:</span> <span style={str}>"design ∩ engineering"</span><span style={punct}>,</span></TokenRow>
+          <TokenRow><span style={key}>"brand.primary"</span><span style={punct}>:</span> <span style={str}>"#BE32D0"</span><span style={punct}>,</span></TokenRow>
+          <TokenRow><span style={key}>"brand.accent"</span><span style={punct}>:</span> <span style={str}>"#FD4496"</span><span style={punct}>,</span></TokenRow>
+          <TokenRow><span style={key}>"a11y"</span><span style={punct}>:</span> <span style={str}>"WCAG 2.1 AA, always"</span><span style={punct}>,</span></TokenRow>
+          <TokenRow><span style={key}>"users.served"</span><span style={punct}>:</span> <span style={num}>29_000_000</span><span style={punct}>,</span></TokenRow>
+          <TokenRow><span style={key}>"status"</span><span style={punct}>:</span> <span style={str}>"open to remarkable teams"</span></TokenRow>
+          <div style={punct}>{'}'}</div>
         </div>
-        <div className="flex gap-1.5">
-          {chips.map((color, i) => (
-            <div key={i} className="flex-1 rounded-full" style={{ height: '9px', background: color }} />
+        <div className="flex items-center gap-2 px-4.5 py-3.5" style={{ borderTop: '1px solid #2e1f34' }}>
+          {swatches.map((color) => (
+            <div key={color} className="rounded" style={{ width: '22px', height: '22px', background: color }} />
           ))}
+          <span style={{ ...mono, fontSize: '11px', color: '#6f5a78', marginLeft: '6px' }}>brand palette / live</span>
         </div>
       </div>
     </div>
@@ -98,8 +86,8 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="container relative py-16" style={{ zIndex: 1 }}>
-        <div className="grid xl:[grid-template-columns:1fr_1.15fr] items-center gap-8 xl:gap-12">
+      <div className="container relative pt-10 pb-16" style={{ zIndex: 1 }}>
+        <div className="grid xl:[grid-template-columns:1fr_1.3fr] items-center gap-8 xl:gap-12">
 
           {/* Left: copy */}
           <div>
@@ -112,21 +100,31 @@ export default function Hero() {
                 color: '#be32d0',
               }}
             >
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#be32d0' }} />
-              Booz Allen · Vellox Agentic Cyber
+              <Astroid className="w-2.5 h-2.5" fill="#be32d0" style={{ color: '#be32d0' }} />
+              UX Engineer · Washington, D.C.
             </div>
 
-            {/* Heading — PT Serif + original highlight */}
-            <h1 className="font-bold mb-6 leading-tight" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)' }}>
+            {/* Heading — 4c marquee style: gradient word + italic accent */}
+            <h1 className="font-bold mb-6" style={{ lineHeight: 0.98 }}>
               <span
-                className="block text-lg font-light text-gray-500 mb-3"
-                style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+                className="block"
+                style={{
+                  fontSize: 'clamp(3.25rem, 7.5vw, 6.5rem)',
+                  letterSpacing: '-.02em',
+                  background: 'linear-gradient(100deg, #be32d0 10%, #fd4496 55%, #f35131 100%)',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                }}
               >
-                👋 Hello, I'm Stephanie
+                designer
               </span>
-              <mark className="hero-highlight bg-transparent">
-                Scaling design across an agentic cyber product suite
-              </mark>
+              <span
+                className="block"
+                style={{ fontSize: 'clamp(3.25rem, 7.5vw, 6.5rem)', letterSpacing: '-.02em', color: '#1b1b1b' }}
+              >
+                who <em style={{ fontStyle: 'italic' }}>ships</em>
+              </span>
             </h1>
 
             {/* Body */}
@@ -157,43 +155,54 @@ export default function Hero() {
           {/* Right: photo + product mockup */}
           <div className="hidden xl:flex items-center pt-8">
             {/* Profile photo card */}
-            <div className="relative shrink-0 z-10" style={{ width: '200px' }}>
-              <div
-                className="absolute pointer-events-none"
-                style={{ top: '-48px', left: '-72px', animation: 'polygonFloat 3s ease alternate-reverse infinite' }}
-              >
-                <PolygonSVG />
-              </div>
+            <div className="relative shrink-0 z-10" style={{ width: '252px' }}>
               <img
                 src={selfPicture}
                 alt="Stephanie Shields"
                 className="w-full block rounded-2xl shadow-lg"
-                style={{ objectFit: 'cover' }}
+                style={{ height: '302px', objectFit: 'cover' }}
               />
-              {/* Heart badge */}
+
+              {/* Redline: outset border (gradient) */}
               <div
-                className="absolute flex items-center justify-center text-2xl bg-white rounded-full shadow-md border border-gray-100"
-                style={{ width: '56px', height: '56px', left: '-36px', bottom: '48px' }}
+                className="absolute pointer-events-none"
+                style={{
+                  left: '-12px', top: '-12px', right: '-12px', bottom: '-12px',
+                  borderRadius: '12px',
+                  padding: '1.5px',
+                  background: 'linear-gradient(180deg, #fd4496 0%, #be32d0 100%)',
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude',
+                }}
+              />
+              {/* Redline: corner ticks */}
+              <div
+                className="absolute bg-white pointer-events-none"
+                style={{ left: '-4px', top: '-16px', width: '8px', height: '8px', border: '1.5px solid #fd4496' }}
+              />
+              <div
+                className="absolute bg-white pointer-events-none"
+                style={{ right: '-4px', bottom: '-16px', width: '8px', height: '8px', border: '1.5px solid #be32d0' }}
+              />
+              {/* Wave badge */}
+              <div
+                className="absolute flex items-center justify-center text-3xl bg-white rounded-full shadow-md border border-gray-100"
+                style={{ width: '68px', height: '68px', left: '-50px', bottom: '52px' }}
               >
-                💜
+                👋
               </div>
             </div>
 
             {/* Product mockup — overlaps photo */}
-            <div className="z-0 flex-1 min-w-0" style={{ marginLeft: '-20px', marginTop: '32px' }}>
-              <ProductMockup />
+            <div className="z-0 flex-1 min-w-0" style={{ marginLeft: '-40px', marginTop: '-96px' }}>
+              <TokensPanel />
             </div>
           </div>
 
         </div>
       </div>
 
-      <style>{`
-        @keyframes polygonFloat {
-          0%   { transform: scale(1) rotate(0deg); }
-          100% { opacity: 0.5; transform: scale(1.15) rotate(20deg); }
-        }
-      `}</style>
     </section>
   )
 }

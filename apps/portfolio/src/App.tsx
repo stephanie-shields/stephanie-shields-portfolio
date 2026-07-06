@@ -18,8 +18,8 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<main className="container py-16"><h1>About</h1></main>} />
         <Route path="/work" element={<main className="container py-16"><h1>Work</h1></main>} />
-        <Route path="/capabilities" element={<main className="container py-16"><h1>Capabilities</h1></main>} />
-        <Route path="/process" element={<main className="container py-16"><h1>Process</h1></main>} />
+        <Route path="/approach" element={<main className="container py-16"><h1>Approach</h1></main>} />
+        <Route path="/toolbox" element={<main className="container py-16"><h1>Toolbox</h1></main>} />
       </Routes>
     </BrowserRouter>
   )
