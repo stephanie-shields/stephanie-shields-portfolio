@@ -26,11 +26,11 @@ export default function TechStack() {
       >
         {technologies.map((tech) => (
           <li key={tech.id} className="flex items-center justify-center">
-            <div className="flex aspect-square w-full items-center justify-center bg-white p-6">
+            <div className="flex aspect-square w-full items-center justify-center bg-white p-4">
               <img
                 src={tech.logo}
                 alt={tech.title}
-                className="max-h-16 max-w-full object-contain"
+                className="max-h-24 max-w-[70%] object-contain"
               />
             </div>
           </li>
