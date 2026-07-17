@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import SelectedWork from './components/SelectedWork'
 
 function HomePage() {
   return (
     <main>
       <Hero />
+      <SelectedWork />
     </main>
   )
 }

@@ -117,7 +117,7 @@ export default function Hero() {
                   color: 'transparent',
                 }}
               >
-                designer
+                a designer
               </span>
               <span
                 className="block"

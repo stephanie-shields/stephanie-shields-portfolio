@@ -1,7 +1,7 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
 
-@theme {
+:root {
   --color-brand: #be32d0;
   --color-brand-end: #fd4496;
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -87,5 +87,57 @@
     max-width: 1320px;
     margin-inline: auto;
     padding-inline: 1.5rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .project-card-cta {
+      opacity: 0;
+      transition: opacity 300ms cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .group:hover .project-card-cta,
+    .group:focus-within .project-card-cta {
+      opacity: 1;
+    }
+  }
+
+  .nav-btn-outline {
+    background: white;
+    color: #212529;
+    border: 1px solid #212529;
+  }
+
+  .nav-btn-outline:hover {
+    background: #212529;
+    color: white;
+  }
+
+  .nav-btn-dark {
+    background: #08060d;
+    color: white;
+    border: 1px solid #08060d;
+  }
+
+  .nav-btn-dark:hover {
+    background: #3d4551;
+    border-color: #3d4551;
+  }
+
+  .project-card-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--highlight-color, transparent);
+    transition: width 0.4s ease;
+    z-index: 0;
+  }
+
+  .group:hover .project-card-highlight::before,
+  .group:focus-within .project-card-highlight::before {
+    width: 100%;
   }
 }
