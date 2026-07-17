@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import SelectedWork from './components/SelectedWork'
 import Capabilities from './components/Capabilities'
 import GithubProjects from './components/GithubProjects'
+import TechStack from './components/TechStack'
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
       <SelectedWork />
       <Capabilities />
       <GithubProjects />
+      <TechStack />
     </main>
   )
 }
