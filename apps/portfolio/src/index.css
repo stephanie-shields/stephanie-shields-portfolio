@@ -46,6 +46,12 @@
   }
 }
 
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @layer utilities {
   .gradient-text {
     background: linear-gradient(180deg, #be32d0 25%, #fd4496 100%);
