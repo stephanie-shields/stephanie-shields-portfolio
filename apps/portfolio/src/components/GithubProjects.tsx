@@ -12,7 +12,7 @@ interface Repo {
 function GithubCard({ repo }: { repo: Repo }) {
   return (
     <div
-      className="relative flex h-full flex-col overflow-hidden rounded-2xl p-5"
+      className="relative flex h-full flex-col overflow-hidden rounded-2xl px-5 pb-5 pt-10"
       style={{
         border: '4px solid transparent',
         background:
@@ -26,7 +26,7 @@ function GithubCard({ repo }: { repo: Repo }) {
             {repo.topics.map((topic) => (
               <li
                 key={topic}
-                className="rounded-md px-2 py-1 text-sm font-normal"
+                className="rounded-md px-2 py-1 text-xs font-normal"
                 style={{ background: '#cff4fc', color: '#212529' }}
               >
                 {topic}
