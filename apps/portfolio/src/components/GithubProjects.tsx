@@ -96,8 +96,8 @@ export default function GithubProjects() {
               type="button"
               aria-label="Previous repository"
               onClick={() => scrollByCard(-1)}
-              className="btn-gradient flex h-10 w-10 items-center justify-center rounded-full"
-              style={{ padding: 0 }}
+              className="btn-gradient flex h-10 w-10 items-center justify-center"
+              style={{ padding: 0, borderRadius: '9999px' }}
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -105,8 +105,8 @@ export default function GithubProjects() {
               type="button"
               aria-label="Next repository"
               onClick={() => scrollByCard(1)}
-              className="btn-gradient flex h-10 w-10 items-center justify-center rounded-full"
-              style={{ padding: 0 }}
+              className="btn-gradient flex h-10 w-10 items-center justify-center"
+              style={{ padding: 0, borderRadius: '9999px' }}
             >
               <ChevronRight className="h-4 w-4" />
             </button>
